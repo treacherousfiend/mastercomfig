@@ -9,128 +9,70 @@ description: A list of all launch options on TF2 for Windows.
     Extracting strings from an executable is a finicky and error-prone process, and as such, some unrelated strings may have slipped through the cracks.
 
 ```txt
--adapter
--all
--all_languages
--allowdebug
--allowstalezip
--alt1
--alt2
--arbmode
--attack
--attack2
--attack3
--audiolanguage
--autoconfig
--back
--break
--BudgetPanel
--bugbait
--bugreporterdll
--buildcubemaps
--burn
--camdistance
--camin
--cammousemove
--camout
--campitchdown
--campitchup
--camyawleft
--camyawright
--CCommunity_GetGamePersonalDataEntries_Request
--ccsyntax
--class
--commandermousemove
--conclearlog
--condebug
--console
--context_action
--count
--damage
--debugbreak
--debugdxsupport
--debugstartupscreen
--default
--defaultgamedir
--demo
--demoui2
--dev
--disable_d3d9_hacks
--disable_matsurf_noculls
--disallowhwmorph
--dontusegamedir
--DP9
--dti
--duck
--dumplongticks
--dumpvidmemstats
--dxlevel
--endgamevid
--etwprofile
--exit
--FillVolume
--filmgrain
--flushlog
--force_device_id
--force_vendor_id
--forceallmips
--forcenovsync
--forcesound
--forcestartupmenu
--forever
--forward
--freq
--frozen
--fs_log
--fs_logbins
--fs_nopreloaddata
--fs_target
--full
--full_memory_dumps
--fullscreen
--g15
--game
--gamestatsfileoutputonly
--gamestatslogging
--gamestatsloggingtofile
--graph
--grenade1
--grenade2
--h4z
--heapcheck
--height
--helpme
--helpme_server
--hideconsole
--HOST_HUNKLEVEL-
--hushsteam
--hY9
--ignoredxsupportcfg
--inf
--InputSystemVersion001
--insecure
--insert_search_path
--inspect_server
--internalbuild
--ji
--jlook
--jump
--k_EGCMsgGetGamePersonalDataCategoriesResponse
--k_EMsgGC_Client2GCEconPreviewDataBlockRequest
--k_EMsgGC_DailyCompetitiveStatsRollup_Response
--k_EMsgGC_GameServer_UseServerModificationItem
--k_EMsgGC_IncrementKillCountAttribute_Multiple
--k_EMsgGCFulfillDynamicRecipeComponentResponse
--k_EMsgGCRequestStoreSalesDataUpToDateResponse
--k_ItemPurgatoryResponse_Finalize_BackpackFull
--Key
--klook
--kServerModificationItemResponse_InternalError
--left
--limitvsconst
--log_opened_files
--lookdown
--lookup
+-adapter //Choose the video device for TF2 to use
+-all_languages //Load all language files, even if unused
+-allowdebug //Start TF2 in "debug" mode. -Dev shares the same functionality
+-allowstalezip //Allow TF2 to load "Stale" maps (unfinished maps?)
+-arbmode //"Don't just blanket kill clip planes in POSIX, only shoot them down if we're running ARB, or asked for nouserclipplanes"
+-audiolanguage //override audio language rather than using what language steam sends
+-autoconfig //automatically config game based on hardware
+-bugbait //Loads bugbait report? likely a leftover from half life, as bugbait is the inengine name for a weapon
+-bugreporterdll //Loads BugReporter.DLL for use with internal debugging
+-buildcubemaps //Builds cubemaps? Both the mentions of it in the code come with comments that are... not flattering
+-ccsyntax //Relates to tokens? "bool spew = false" unless booted with this launch option
+-conclearlog //Deletes console log file
+-condebug //Log console in a "debug" state?
+-console //Display console on startup
+-debugbreak //Internal function, shares functionality with -raiseonassert
+-debugdxsupport //enable debug DX support, which I thinkallows you to change DXlevel ingame?
+-debugstartupscreen //"Renders the startup graphic into the HWND"
+-default //Runs game with default settings, as well as not accepting any updates to cvars
+-defaultgamedir //Choose with game directory to load by default, default is hl2
+-demo //Setup the "demo" flag, this is unrelated to ingame demos and is actually for game demos (versions of the game for people who haven't bought the game yet), Leftover from HL2 and Portal (both instances exist in code)
+-dev //Run game in "dev/debug" mode, shares functionality with -allowdebug
+-disable_d3d9_hacks //for debugging only, disables some driver hacks and causes visual glitches
+-disable_matsurf_noculls //does something for initialization and shutdown
+-disallowhwmorph //Disables "fast vertex textures"
+-dti //Does something related to data table instrumentation?
+-dumplongticks //Enables "long tick watcher thread"
+-dumpvidmemstats //"Spew global texture memory usage if asked to"
+-dxlevel //Choose what DXlevel to run the game with, skipping what is already set
+-endgamevid //Play "end game vid"
+-etwprofile //Enable timestamped log to ETW, identical to -profile except logs to "ETW" instead
+-exit //Quit game
+-filmgrain //Enable film grain
+-flushlog //Flushes log? XBOX only
+-force_device_id //Debug only, forces a speciific device ID
+-force_vendor_id //Debug only, forces a speciific vendor ID
+-forceallmips //"...force creating <32x32mips to test for reported performance regressions on some systems"
+-forcenovsync //Force disables vsync
+-forcesound //Force sound initialization
+-forcestartupmenu //Forces the startup menu
+-forever //"when you get to the end of the maplist, start over from the top"
+-freq //Force refresh rate to use, skipping what is already set
+-fs_log //Some sort of logging
+-fs_logbins //Different form of logging, X360 only
+-fs_nopreloaddata //Don't preload data?
+-fs_target //Does something if -fs_log is set
+-full //Force fullscreen, identical to -fullscreen
+-full_memory_dumps //Force full memory dumps
+-fullscreen //Force fullscreen, identical to -full
+-g15 //Initializes LCD support for Logitech G15 keyboard
+-game //Determines what game to try and load
+-gamestatsfileoutputonly //Write game stats to file instead of to steam
+-gamestatslogging //Log gamestats?
+-gamestatsloggingtofile //Log gamestats to file as well as steam?
+-heapcheck //Check heap?
+-height //Force window height
+-hideconsole //disable console
+-hushsteam //"We don't use exceptions, so tell steam not to use try/catch in callback handlers"
+-ignoredxsupportcfg //Ignore what the cfg files say is a supported DXlevel?
+-insecure //Launch game in insecure mode, aka, without steam or vac?
+-insert_search_path //Manually set a search path? related to gameinfo.txt?
+-internalbuild //Mark game session as being an internal build, and not to phonehome to steam at all
+-limitvsconst //something related to the max vertex shader constant?
+-log_opened_files //Open log files rather than deleting and creating a new one?
+
 -makedevshots
 -makereslists
 -mat_aaquality
