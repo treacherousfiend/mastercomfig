@@ -17,41 +17,33 @@ textures=high
 will set the texture quality to `high`.
 
 !!! note
-    If you do not have `user` folder you should create it. Same principle applies to the `modules.cfg` file.
+    If you do not have `user` folder you should create it. Same principle applies to `modules.cfg` file.
 
 ### Advanced
 
 !!! warning
     These steps are entirely optional and are only for advanced customization.
 
-#### Module level aliases
-
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
-If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will prevent mastercomfig from running texture commands.
+If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will disable mastercomfig from running texture commands.
 
-Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup by entering `run_modules` into the console.
+Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran the module commands by entering `run_modules` into console.
 
-#### Module user layer alias
-
-The modules you choose in `user/modules.cfg` are executed by the `modules_c` alias.
-
-This means that you can change this alias in game, and have multiple versions of your modules for different quality preferences you may have. You can apply these new modules using `apply_user`.
-
-## Networking modules
+## Network modules
 
 ### SourceTV Compatibility
 
-Ensures compatibility with SourceTV spectating.
+Ensures setting compatibility with SourceTV.
 
 Default setting: **`sourcetv=on`** (all presets).
 
 * **`sourcetv=off`**: Reduces the latency of changing spectator targets, but breaks compatibility with SourceTV. Cannot be switched off until a game restart.
 * **`sourcetv=on`**: Keeps compatibility with SourceTV.
 
-### Packet Rate
+### Packet rate
 
-Controls how fast you send to and receive from the server.
+Controls how fast you send and receive from the server.
 
 Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 
@@ -60,16 +52,16 @@ Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 
 ### Snapshot Buffer
 
-Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives. Also known as linear interpolation (lerp or interp).
+Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.
+Also known as linear interpolation (lerp or interp). Note: mastercomfig sets this automatically per class, but setting it in your `modules.cfg` will override this behavior.
 
-Default setting: **`snapshot_buffer=auto`** (all presets).
+Default setting: based on which class you are currently playing.
 
-* **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class.
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot.
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.
 
-### Packet Size
+### Packet size
 
 Controls how big packets are and how they are split up/compressed.
 
@@ -77,7 +69,7 @@ Default setting: **`packet_size=big`** (all presets).
 
 * **`packet_size=small`**: Uses the smallest packet size, which should be able to be processed by even the worst routers.
 * **`packet_size=conservative`**: Uses a smaller, safe packet size that should be able to be processed by most routers, even lower end ones.
-* **`packet_size=big`**: Uses a reasonably large packet size limit that should work with most reliable connections and internet routes.
+* **`packet_size=big`**: Uses a reasonably large packet size limit that should work with most reliable connections and Internet routes.
 * **`packet_size=saver`**: This minimizes data usage by aggressively compressing packets and avoiding splitting packets (which have more data size overhead than a single packet).
 * **`packet_size=speed`**: This prioritizes less CPU usage over data usage by disabling packet compression and avoiding split packets.
 
@@ -106,19 +98,16 @@ Default setting: **`bandwidth=1.5Mbps`** (all presets).
 
 ### Downloads
 
-Filters what custom content is allowed to be downloaded from the server.
+Default setting: not set.
 
-Default setting: **`download=auto`** (all presets).
-
-* **`download=auto`**: Whatever the user set in the game settings. By default, the game downloads all custom files from servers.
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
 * **`download=mapsonly`**: Download only maps from servers.
-* **`download=none`**: Don't download any custom files from servers.
+* **`download=none`**: Download no custom files from servers.
 
-## Graphics modules
+## Rendering modules
 
-### Level of Detail
+### Level of detail
 
 Controls how detailed models are.
 
@@ -137,8 +126,8 @@ Default setting: based on which preset you are currently using.
 
 * **`lighting=very_low`**: No dynamic lights. Skips all world lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
 * **`lighting=low`**: No dynamic lights. Skips dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
-* **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, rimlights or lighting brightness boost.
-* **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting.
+* **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
+* **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting. No lightwarps.
 * **`lighting=high`**: 6 dynamic lights. Detailed lighting.
 * **`lighting=very_high`**: 12 dynamic lights. Detailed lighting. Slight extra lighting brightness boost.
 * **`lighting=ultra`**: 32 dynamic lights. Extremely detailed lighting. Extra lighting brightness boost.
@@ -147,7 +136,7 @@ Default setting: based on which preset you are currently using.
 
 Control extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
 
-Default setting: **`lighting_ex=high`** (all presets, except Medium Low, Low and Very Low).
+Default setting: **`lighting_ex=high`** (all presets except Low and Very Low (**`lighting_ex=low`**)).
 
 * **`lighting_ex=low`**: Phong off.
 * **`lighting_ex=high`**: Phong on.
@@ -160,10 +149,10 @@ Default setting: based on which preset you are currently using.
 
 * **`shadows=off`**: No shadows.
 * **`shadows=very_low`**: Blobby shadows.
-* **`shadows=low`**: Up to 3 low quality shadows.
-* **`shadows=medium`**: Up to 7 high quality shadows, and low robot/Halloween boss shadow distance.
-* **`shadows=high`**: Up to 11 high quality shadows, and medium robot/Halloween boss shadow distance.
-* **`shadows=ultra`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance.
+* **`shadows=low`**: Up to 4 low quality shadows, and low robot shadow distance.
+* **`shadows=medium`**: Up to 12 high quality shadows, and medium robot shadow distance.
+* **`shadows=high`**: Up to 18 high quality shadows, and high robot shadow distance.
+* **`shadows=ultra`**: Up to 32 high quality shadows, and very high robot/Halloween boss shadow distance.
 
 ### Effects
 
@@ -205,28 +194,28 @@ Default setting: based on which preset you are currently using.
 * **`particles=high`**: Enables weather particles, barely reduces particle density, enables bullet impact flecks.
 * **`particles=ultra`**: Enables weather particles, uses full particle density, enables the new bullet impact effects system, enables bullet impact flecks.
 
-### General Post-Processing
+### General Post Processing
 
-Controls standard post-processing effects.
+Controls standard post processing effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`post_processing=off`**: No post-processing.
+* **`post_processing=off`**: No post processing.
 * **`post_processing=low`**: Enables basic color correction.
 * **`post_processing=medium`**: Enables LDR bloom.
 * **`post_processing=high`**: Enables standard HDR and bloom.
 
 ### Pyrovision
 
-Controls Pyrovision visual effects.
+Controls pyrovision visual effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`pyrovision=low`**: Disables Pyrovision vignette and skybox SSAO depth of field.
-* **`pyrovision=medium`**: Enables static Pyrovision vignette.
-* **`pyrovision=high`**: Enables skybox SSAO depth of field, dynamic Pyrovision vignette.
+* **`pyrovision=low`**: Disables pyrovision vignette and skybox SSAO depth of field.
+* **`pyrovision=medium`**: Enables static pyrovision vignette.
+* **`pyrovision=high`**: Enables skybox SSAO depth of field, dynamic pyrovision vignette.
 
-### Motion Blur
+### Motion blur
 
 Controls blurring effect from rotation and movement.
 
@@ -236,22 +225,31 @@ Default setting: **`motion_blur=off`** (all presets).
 * **`motion_blur=low`**: Turns on motion blur but reduces it significantly.
 * **`motion_blur=high`**: Motion blur fully enabled.
 
-### Anti-Aliasing
+### Anti-aliasing
 
-Controls additional anti-aliasing passes (a.k.a. alpha to coverage) and the main hardware based MSAA anti-aliasing.
+Controls additional anti-aliasing passes.
+
+Default setting: based on which preset you are currently using.
+
+* **`aa=off`**: Turns off additional anti-aliasing.
+* **`aa=on`**: Enhanced fence and grass anti-aliasing.
+
+### MSAA Anti-aliasing
+
+Controls the main hardware based MSAA anti-aliasing (and CSAA, if you have an NVIDIA card that supports it).
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
 
 Default setting: based on which preset you are currently using.
 
-* **`anti_aliasing=off`**: Turns off all forms of anti-aliasing.
-* **`anti_aliasing=on`**: Only enables [alpha to coverage](https://en.wikipedia.org/wiki/Alpha_to_coverage).
-* **`anti_aliasing=msaa_2x`**: Enables alpha to coverage and MSAA 2x.
-* **`anti_aliasing=msaa_4x`**: Enables alpha to coverage and MSAA 4x.
-* **`anti_aliasing=msaa_8x`**: Enables alpha to coverage and MSAA 8x.
+* **`aa_msaa=off`**: Turns off MSAA and CSAA.
+* **`aa_msaa=2x`**: MSAA 2x
+* **`aa_msaa=4x`**: MSAA 4x
+* **`aa_msaa=8x`**: MSAA 8x
+* **`aa_msaa=16x`**: MSAA 8x + CSAA 2x if supported. MSAA 8x otherwise.
 
-### Texture Filtering
+### Texture filtering
 
 Controls texture smoothing/filtering.
 
@@ -280,32 +278,33 @@ Default setting: based on which preset you are currently using.
 * **`characters=high`**: Enables smooth facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at a slightly increased range.
 * **`characters=ultra`**: Enables smooth facial animations, high quality models, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at all ranges.
 
-### General Decals
+### General decals
 
 Controls bullet holes and overall decal support.
 
 !!! note
+
     In the Very Low preset, decals are forced invisible.
 
 Default setting: based on which preset you are currently using.
 
 * **`decals=off`**: Disables decals.
-* **`decals=low`**: 9 max decals that can overlap.
-* **`decals=medium`** 32 max decals that can overlap.
-* **`decals=high`**: 80 max decals that can overlap.
-* **`decals=ultra`**: 2048 max decals (engine limit) that can overlap with practically no limit.
+* **`decals=low`**: 9 max decals that hide at a medium range that can't overlap very much.
+* **`decals=medium`** 32 max decals that hide at a medium range that can't overlap very much.
+* **`decals=high`**: 80 max decals that hide at a far away range that can overlap much more.
+* **`decals=ultra`**: 2048 max decals (engine limit) that do not hide and can overlap with practically no limit.
 
-### Model Decals
+### Model decals
 
 Controls blood on hurt players and some bullet decals on props.
 
 Default setting: based on which preset you are currently using.
 
-* **`decals_models=off`**: Disables model decals.
+* **`decals_models=off`**: Disable model decals.
 * **`decals_models=low`**: Allow up to 9 model decals.
 * **`decals_models=high`**: Allow up to 32 model decals.
 
-### Map Decals
+### Map decals
 
 Controls decals placed by the map author.
 
@@ -314,14 +313,14 @@ Default setting: based on which preset you are currently using.
 * **`decals_art=off`**: Disables map decals.
 * **`decals_art=on`**: Enables map decals, and blocks full decal clearing done by mastercomfig periodically.
 
-### Spray Decals
+### Spray decals
 
 Controls decals sprayed by players.
 
 Default setting: based on which preset you are currently using.
 
 * **`sprays=off`**: Completely disables downloading, uploading and displaying sprays.
-* **`sprays=on`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. If the `decals` module is `off`, this will set it to the `low` level.
+* **`sprays=on`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. You must set a [Decals module](#general-decals) higher than `off` for it to work.
 
 ### Gibs
 
@@ -329,21 +328,21 @@ Default setting: based on which preset you are currently using.
 
 * **`gibs=off`**: Disables gibs.
 * **`gibs=low`**: Max of 2 gib parts.
-* **`gibs=medium_low`**: Max of 4 gib parts.
 * **`gibs=medium`**: Default number of gibs.
 * **`gibs=high`**: Default number of gibs, gibs can burn.
 
-### Silly Gibs
+### Silly gibs
 
-Default setting: **`sillygibs=auto`**.
+Default setting: **`sillygibs=off`** (if gibs are on), and **`sillygibs=on`** (if `gibs=off`).
 
-* **`sillygibs=auto`**: Automatically chooses the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
 * **`sillygibs=off`**: Normal gibs and blood.
 * **`sillygibs=on`**: Turns on silly gibs mode. This means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
 
 ### Props
 
 Controls the rendering of various small objects.
+
+Keep in mind that you must add your preferred `cl_detaildist` and `cl_detailfade` settings to your class configs if they are different from your preset, or else they will be overridden.
 
 Default setting: based on which preset you are currently using.
 
@@ -363,7 +362,7 @@ Default setting: based on which preset you are currently using.
 * **`ragdolls=medium`**: Enables standard physics ragdolls.
 * **`ragdolls=high`**: Enables physics ragdolls with collisions with a high fade out time, as well as special animations like decapitation.
 
-### 3D Sky
+### 3D sky
 
 Controls the enhanced 3D skybox that is present in most maps.
 
@@ -378,15 +377,15 @@ Controls cloth and joint physics on some items like the fish and skull bat.
 
 Default setting: based on which preset you are currently using.
 
-* **`jigglebones=off`**: Always disables jigglebones.
-* **`jigglebones=on`**: Disables jigglebones only if the framerate is below 67FPS.
-* **`jigglebones=force_on`**: Never disables jigglebones.
+* **`jigglebones=off`**: Always disable jigglebones.
+* **`jigglebones=on`**: Disable jigglebones only if the framerate is below 67FPS.
+* **`jigglebones=force_on`**: Never disable jigglebones.
 
 ### Killstreak Sheens Speed
 
 How fast the animation is on the killstreak sheen glow for weapons.
 
-Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
+Default setting: based on which preset you are currently using.
 
 * **`sheens_speed=off`**: Skips updating sheen glow animation.
 * **`sheens_speed=slow`**: Slow speed.
@@ -404,7 +403,7 @@ Default setting: **`sheens_tint=high`** (all presets).
 * **`sheens_tint=high`**: High tint boost.
 * **`sheens_tint=full`**: Maximum tint boost.
 
-### Texture Quality
+### Texture quality
 
 Controls texture quality.
 
@@ -453,34 +452,24 @@ Setting it higher can reduce input delay.
 Default setting: **`fpscap=1000`** (all presets).
 
 * **`fpscap=powersaver`**: Sets FPS cap to half of your display's refresh rate.
-* **`fpscap=30`**: Sets FPS cap to 30 FPS.
-* **`fpscap=60`**: Sets FPS cap to 60 FPS.
-* **`fpscap=75`**: Sets FPS cap to 75 FPS.
-* **`fpscap=120`**: Sets FPS cap to 120 FPS.
-* **`fpscap=144`**: Sets FPS cap to 144 FPS.
-* **`fpscap=160`**: Sets FPS cap to 160 FPS.
-* **`fpscap=165`**: Sets FPS cap to 165 FPS.
-* **`fpscap=180`**: Sets FPS cap to 180 FPS.
-* **`fpscap=200`**: Sets FPS cap to 200 FPS.
-* **`fpscap=240`**: Sets FPS cap to 240 FPS.
-* **`fpscap=300`**: Sets FPS cap to 300 FPS.
-* **`fpscap=360`**: Sets FPS cap to 360 FPS.
-* **`fpscap=400`**: Sets FPS cap to 400 FPS.
-* **`fpscap=1000`**: Sets FPS cap to 1000 FPS (maximum safe value).
+* **`fpscap=30`**: Sets FPS cap to 30FPS.
+* **`fpscap=60`**: Sets FPS cap to 60FPS.
+* **`fpscap=75`**: Sets FPS cap to 75FPS.
+* **`fpscap=120`**: Sets FPS cap to 120FPS.
+* **`fpscap=144`**: Sets FPS cap to 144FPS.
+* **`fpscap=160`**: Sets FPS cap to 160FPS.
+* **`fpscap=165`**: Sets FPS cap to 165FPS.
+* **`fpscap=180`**: Sets FPS cap to 180FPS.
+* **`fpscap=200`**: Sets FPS cap to 200FPS.
+* **`fpscap=240`**: Sets FPS cap to 240FPS.
+* **`fpscap=300`**: Sets FPS cap to 300FPS.
+* **`fpscap=360`**: Sets FPS cap to 360FPS.
+* **`fpscap=1000`**: Sets FPS cap to 1000FPS (maximum safe value).
 * **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000FPS in meaningful game scenarios.
-
-### OpenGL
-
-Controls whether mastercomfig should apply OpenGL optimizations or not.
-
-Default setting: **`opengl=default`** (all presets).
-
-* **`opengl=skip`**: Skips applying OpenGL optimizations. Helpful for users who run on Windows, which does not have OpenGL.
-* **`opengl=default`**: Applies OpenGL optimizations.
 
 ## HUD modules
 
-### Player Model
+### Player model
 
 Toggle the live 3D player model in the corner of your screen.
 
@@ -497,19 +486,6 @@ Default setting: **`hud_panels=on`** (all presets, except Very Low).
 
 * **`hud_panels=off`**: Disables health/player info panels on hover.
 * **`hud_panels=on`**: Enables health/player info panels on hover.
-
-### Match HUD
-
-Toggle match status HUD at the top of the screen.
-
-!!! note
-    It's highly recommended to use this module, as the built-in console variable
-    does not work properly when turning off directly.
-
-Default setting **`match_hud=on`** (all presets, except Very Low).
-
-* **`match_hud=off`**: Disables match status HUD.
-* **`match_hud=on`**: Enables match status HUD.
 
 ### Messages
 
@@ -536,7 +512,7 @@ Controls banners that appear at the top center of the screen, notifying you of a
 
 Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
 
-* **`killstreaks=off`**: Disables killstreak banner.
+* **`killstreaks=off`**: Disable killstreak banner.
 * **`killstreaks=low`**: Enables killstreak text with no banner.
 * **`killstreaks=high`**: Enables killstreak translucent banner.
 
@@ -544,21 +520,10 @@ Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
 
 Controls the HUD achievements tracker.
 
-Default setting: **`hud_achievement=on`** (all presets, except Very Low).
+Default setting: **`hud_achievement=off`** (all presets).
 
-* **`hud_achievement=off`**: Disables achievement tracker panel completely.
-* **`hud_achievement=on`**: Enables support for achievement tracker panel.
-
-### Debug
-
-Controls various debugging displays and console.
-
-Default setting: **`debug=minimal`** (all presets, except Very Low).
-
-* **`debug=off`**: Disables all debug features.
-* **`debug=minimal`**: Enables developer console.
-* **`debug=on_partial`**: Enables all but the noisiest debug HUDs.
-* **`debug=on`**: Enables all debug HUDs.
+* **`hud_achievement=off`**: Disable achievement tracker panel completely.
+* **`hud_achievement=on`**: Enable support for achievement tracker panel.
 
 ### Outlines
 
@@ -566,21 +531,10 @@ Controls the outlines that appear through walls for players and some objectives 
 
 Default setting: based on which preset you are currently using.
 
-* **`outlines=off`**: Disables outlines and nametags.
-* **`outlines=low`**: Enables nametags, disable outlines.
-* **`outlines=medium`**: Disables nametags and player outlines, enable objective outlines.
-* **`outlines=high`**: Enables nametags and outlines.
-
-### Map Background
-
-Controls the live map that appears in the background of the main menu. Some options automatically exit immediately, for the sake of preloading assets.
-
-Default setting: **`dynamic_background=off`** (all presets).
-
-* **`dynamic_background=off`**: No main menu map background on startup.
-* **`dynamic_background=preload`**: `preload_room` map background for yttrium's preloading (auto disconnects). **Warning: use this only for yttrium's preloading. If you want to preload anything else, use the `itemtest` setting. The probability that you don't have the `preload_room` map is big.**
-* **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
-* **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
+* **`outlines=off`**: Disable outlines and nametags.
+* **`outlines=low`**: Enable nametags, disable outlines.
+* **`outlines=medium`**: Disable nametags and player outlines, enable objective outlines.
+* **`outlines=high`**: Enable nametags and outlines.
 
 ## Sound modules
 
@@ -612,7 +566,38 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 * **`voice_chat=off`**: Disables the in-game voice chat system.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
 
-## Misc modules
+## Miscellaneous modules
+
+### Debug
+
+Controls various debugging displays and console.
+
+Default setting: **`debug=minimal`** (all presets, except Very Low).
+
+* **`debug=on`**: Enable all debug HUDs.
+* **`debug=on_partial`**: Enable all but the noisiest debug HUDs.
+* **`debug=minimal`**: Enable developer console.
+* **`debug=off`**: Disable all debug features.
+
+### Map Background
+
+Controls the live map that appears in the background of the main menu. Some options automatically exit immediately, for the sake of preloading assets.
+
+Default setting: **`dynamic_background=off`** (all presets).
+
+* **`dynamic_background=off`**: No main menu map background on startup.
+* **`dynamic_background=preload`**: `preload_room` map background for yttrium preloading (auto disconnects).
+* **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
+* **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
+
+### Logo
+
+Controls the mastercomfig logo which appears in console on start up.
+
+Default setting: **`logo=on`** (all presets, except Very Low).
+
+* **`logo=off`**: Does not print logo in console on startup.
+* **`logo=on`**: Prints logo in console on startup.
 
 ### Mod Support
 
@@ -625,40 +610,18 @@ You may want to also enable preloading using the [Map Background module](#map-ba
 * **`mod_support=off`**: Enables better file system performance for faster first map loads, at the cost of animation and model mods causing crashes.
 * **`mod_support=on`**: Disables file system optimizations for the first map load, making it slower, but fixes crashes caused by animation and model mods.
 
-### Logo
-
-Controls the mastercomfig logo which appears in console on start up.
-
-Default setting: **`logo=on`** (all presets, except Very Low).
-
-* **`logo=off`**: Does not print logo in console on startup.
-* **`logo=on`**: Prints logo in console on startup.
-
 ### Movement Binds
 
 !!! warning
-    This module requires the Null-Cancelling Movement addon in order to function.
+    This module requires the Null Movement addon in order to function
 
-Changes the keys that are used to move while the Null-Cancelling Movement addon is installed.
-If your preferred movement keys are not listed here, you can edit them manually by binding these aliases:
-
-* Forward: `+mf`
-* Left: `+ml`
-* Backward: `+mb`
-* Right: `+mr`
-
-Example:
-
-* Forward: `bind w +mf`
-* Left: `bind a +ml`
-* Backward: `bind s +mb`
-* Right: `bind d +mr`
+Changes the keys that are used to move while the Null Movement addon is installed, if your preferred movement keys are not listed here, you can edit them manually outside of modules.cfg. Instructions for doing so can be found [here](https://docs.mastercomfig.com/en/latest/customization/custom_configs/#null-cancelling-movement-addon-binds).
 
 Default setting: **`move_bind=wasd`** (all presets).
 
-* **`move_bind=wasd`**: Sets movement keys to WASD (default).
-* **`move_bind=esdf`**: Sets movement keys to ESDF.
-* **`move_bind=zqsd`**: Sets movement keys to ZQSD (default for AZERTY keyboards).
-* **`move_bind=arrows`**: Sets movement keys to the Arrow Keys.
-* **`move_bind=asdf`**: Sets movement keys to ASDF (A/S forward/back, D/F left/right).
-* **`move_bind=vim`**: Sets movement keys to HJKL (K/J forward/back, H/L left/right).
+* **`move_bind=wasd`**: Set movement keys to WASD (default).
+* **`move_bind=esdf`**: Set movement keys to ESDF.
+* **`move_bind=zqsd`**: Set movement keys to ZQSD (default for AZERTY keyboards).
+* **`move_bind=arrows`**: Set movement keys to the Arrow Keys.
+* **`move_bind=asdf`**: Set movement keys to ASDF (A/S forward/back, D/F left/right).
+* **`move_bind=vim`**: Set movement keys to HJKL (K/J forward/back, H/L left/right).
