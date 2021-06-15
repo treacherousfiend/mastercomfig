@@ -118,8 +118,6 @@ mastercomfig provides a set of handy debugging commands used during mastercomfig
 * `debug_output_toggle`: Cycle through all 4 modes for developer only output. Different modes display different amounts of information.
 * `debug_output_1`: Enable developer only output level 1.
 * `debug_output_2`: Enable developer only output level 2.
-* `debug_output_3`: Enable developer only output level 3.
-* `debug_output_4`: Enable developer only output level 4.
 
 ### Gameplay Testing
 
