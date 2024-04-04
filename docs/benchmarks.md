@@ -12,7 +12,7 @@ Thus, it's highly appreciated to benchmark mastercomfig and any changes you make
 
 ## How to benchmark
 
-1. Download [the sbmrk24 24-player benchmark file](https://drive.google.com/file/d/1xbuiBnZb301EXFyYuQP17KS21AWM_v5o/view) by shounic.
+1. Download the [`sbmrk24` 24-player benchmark file](https://drive.google.com/file/d/1xbuiBnZb301EXFyYuQP17KS21AWM_v5o/view) by shounic.
 2. Move it to the `tf/` folder.
 3. Launch the game.
 4. Enter `timedemo benchmark_test`
