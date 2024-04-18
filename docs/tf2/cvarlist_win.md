@@ -548,7 +548,7 @@ creditsdone                              : cmd      :                  :
 crosshair                                : 1        : , "a", "cl"      :
 currency_give                            : cmd      :                  : Have some in-game money.
 cvarlist                                 : cmd      :                  : Show the list of convars/concommands.
-datacachesize                            : 256      :                  : Size in MB.
+datacachesize                            : 512      :                  : Size in MB.
 dbg_spew_connected_players_level         : 0        : , "sv"           : If enabled, server will spew connected player GC updates
 dbghist_addline                          : cmd      :                  : Add a line to the debug history. Format: <category id> <line>
 dbghist_dump                             : cmd      :                  : Dump the debug history to the console. Format: <category id>     Categories:      0: Entity I/O      1: AI Decisions      2: Scene Print      3: Alyx Blind      4: Log of damage done to player
@@ -753,7 +753,7 @@ force_centerview                         : cmd      :                  :
 -forward                                 : cmd      :                  :
 fov                                      : cmd      :                  : Change players FOV
 fov_desired                              : 75       : , "a", "user", "cl" : Sets the base field-of-view.
-fps_max                                  : 300      :                  : Frame rate limiter, cannot be set while connected to a server.
+fps_max                                  : 400      :                  : Frame rate limiter, cannot be set while connected to a server.
 free_pass_peek_debug                     : 0        : , "sv"           :
 fs_monitor_read_from_pack                : 0        :                  : 0:Off, 1:Any, 2:Sync only
 fs_printopenfiles                        : cmd      :                  : Show all files currently opened by the engine.
@@ -820,7 +820,6 @@ hap_HasDevice                            : 0        : , "user", "cl"   : falcon 
 hap_melee_scale                          : 0        : , "numeric", "cl" :
 hap_noclip_avatar_scale                  : 0        : , "numeric", "cl" :
 hap_ui_vehicles                          : 0        : , "cl"           :
-heartbeat                                : cmd      :                  : Force heartbeat of master servers
 help                                     : cmd      :                  : Find help about a convar/concommand.
 +helpme                                  : cmd      :                  :
 -helpme                                  : cmd      :                  :
@@ -1027,7 +1026,7 @@ m_mouseaccel1                            : 0        : , "a", "cl"      : Windows
 m_mouseaccel2                            : 0        : , "a", "cl"      : Windows mouse acceleration secondary threshold (4x movement).
 m_mousespeed                             : 1        : , "a", "cl"      : Windows mouse acceleration (0 to disable, 1 to enable [Windows 2000: enable initial threshold], 2 to enable secondary threshold [Windows 2000 only]).
 m_pitch                                  : 0        : , "a", "cl"      : Mouse pitch factor.
-m_rawinput                               : 0        : , "a", "cl"      : Use Raw Input for mouse input.
+m_rawinput                               : 1        : , "a", "cl"      : Use Raw Input for mouse input.
 m_side                                   : 0        : , "a", "cl"      : Mouse side factor.
 m_yaw                                    : 0        : , "a", "cl"      : Mouse yaw factor.
 map                                      : cmd      :                  : Start playing on specified map.
@@ -1238,8 +1237,8 @@ mem_dumpstats                            : 0        :                  : Dump cu
 mem_dumpvballocs                         : cmd      :                  : Dump VB memory allocation stats.
 mem_eat                                  : cmd      :                  :
 mem_force_flush                          : 0        : , "cheat"        : Force cache flush of unlocked resources on every alloc
-mem_max_heapsize                         : 256      :                  : Maximum amount of memory to dedicate to engine hunk and datacache (in mb)
-mem_max_heapsize_dedicated               : 64       :                  : Maximum amount of memory to dedicate to engine hunk and datacache, for dedicated server (in mb)
+mem_max_heapsize                         : 512      :                  : Maximum amount of memory to dedicate to engine hunk and datacache (in mb)
+mem_max_heapsize_dedicated               : 128      :                  : Maximum amount of memory to dedicate to engine hunk and datacache, for dedicated server (in mb)
 mem_min_heapsize                         : 144      :                  : Minimum amount of memory to dedicate to engine hunk and datacache (in mb)
 mem_periodicdumps                        : 0        :                  : Write periodic memstats dumps every n seconds.
 mem_test                                 : cmd      :                  :
@@ -2363,20 +2362,28 @@ snd_async_spew_blocking                  : 1        :                  : Spew me
 snd_async_stream_spew                    : 0        :                  : Spew streaming info ( 0=Off, 1=streams, 2=buffers
 snd_buildcache                           : cmd      :                  : <directory or VPK filename>  Rebulds sound cache for a given search path.
 snd_cull_duplicates                      : 0        :                  : If nonzero, aggressively cull duplicate sounds during mixing. The number specifies the number of duplicates allowed to be played.
+snd_debug_gaincurve                      : 0        :                  : Visualize sound gain fall off
+snd_debug_gaincurvevol                   : 1        :                  : Visualize sound gain fall off
+snd_debug_panlaw                         : 0        : , "cheat"        : Visualize panning crossfade curves
 snd_defer_trace                          : 1        :                  :
 snd_delay_sound_shift                    : 0        :                  :
 snd_disable_mixer_duck                   : 0        :                  :
 snd_duckerattacktime                     : 0        : , "a"            :
 snd_duckerreleasetime                    : 2        : , "a"            :
 snd_duckerthreshold                      : 0        : , "a"            :
+snd_ducking_off                          : 1        : , "a"            :
 snd_ducktovolume                         : 0        : , "a"            :
 snd_dumpclientsounds                     : cmd      :                  : Dump sounds to console
 snd_foliage_db_loss                      : 4        : , "cheat"        :
+snd_front_headphone_position             : cmd      :                  : Specifies the position (in degrees) of the virtual front left/right headphones.
+snd_front_stereo_speaker_position        : cmd      :                  : Specifies the position (in degrees) of the virtual front left/right speakers.
+snd_front_surround_speaker_position      : cmd      :                  : Specifies the position (in degrees) of the virtual front left/right speakers.
 snd_gain                                 : 1        : , "cheat"        :
 snd_gain_max                             : 1        : , "cheat"        :
 snd_gain_min                             : 0        : , "cheat"        :
-snd_legacy_surround                      : 0        : , "a"            :
-snd_lockpartial                          : 1        :                  :
+snd_headphone_pan_exponent               : cmd      :                  : Specifies the exponent for the pan xfade from phone to phone if the 'exp' pan law is being used.
+snd_headphone_pan_radial_weight          : cmd      :                  : Apply cos(angle) * weight before pan law
+snd_mergemethod                          : 1        :                  : Sound merge method (0 == sum and clip, 1 == max, 2 == avg).
 snd_mix_async                            : 0        :                  :
 snd_mixahead                             : 0        : , "a"            :
 snd_musicvolume                          : 1        : , "a"            : Music volume
@@ -2385,6 +2392,10 @@ snd_noextraupdate                        : 0        :                  :
 snd_obscured_gain_dB                     : -2       : , "cheat"        :
 snd_pitchquality                         : 1        : , "a"            :
 snd_profile                              : 0        : , "demo"         :
+snd_rear_headphone_position              : cmd      :                  : Specifies the position  (in degrees) of the virtual rear left/right headphones.
+snd_rear_speaker_scale                   : 1        : , "cheat"        : How much to scale rear speaker contribution to front stereo output
+snd_rear_stereo_speaker_position         : cmd      :                  : Specifies the position (in degrees) of the virtual rear left/right speakers.
+snd_rear_surround_speaker_position       : cmd      :                  : Specifies the position (in degrees) of the virtual rear left/right speakers.
 snd_refdb                                : 60       : , "cheat"        :
 snd_refdist                              : 36       : , "cheat"        :
 snd_restart                              : cmd      :                  : Restart sound system.
@@ -2395,13 +2406,19 @@ snd_showstart                            : 0        : , "cheat"        :
 snd_ShowThreadFrameTime                  : 0        :                  :
 snd_soundmixer                           : 0        :                  :
 snd_spatialize_roundrobin                : 0        :                  : Lowend optimization: if nonzero, spatialize only a fraction of sound channels each frame. 1/2^x of channels will be spatialized per frame.
-snd_surround_speakers                    : 2        :                  :
+snd_stereo_speaker_pan_exponent          : cmd      :                  : Specifies the exponent for the pan xfade from speaker to speaker if the 'exp' pan law is being used.
+snd_stereo_speaker_pan_radial_weight     : cmd      :                  : Apply cos(angle) * weight before pan law
+snd_surround_speaker_pan_exponent        : cmd      :                  : Specifies the exponent for the pan xfade from speaker to speaker if the 'exp' pan law is being used.
+snd_surround_speaker_pan_radial_weight   : cmd      :                  : Apply cos(angle) * weight before pan law
+snd_surround_speakers                    : -1       :                  :
 snd_visualize                            : 0        : , "cheat"        : Show sounds location in world
 snd_vox_captiontrace                     : 0        :                  : Shows sentence name for sentences which are set not to show captions.
 snd_vox_globaltimeout                    : 300      :                  :
 snd_vox_sectimetout                      : 300      :                  :
 snd_vox_seqtimetout                      : 300      :                  :
 sndplaydelay                             : cmd      :                  : Usage:  sndplaydelay delay_in_sec (negative to skip ahead) soundname
+sound_device_list                        : cmd      :                  : Lists all available audio devices.
+sound_device_override                    : 0        : , "a"            : ID of the sound device to use
 soundfade                                : cmd      :                  : Fade client volume.
 soundinfo                                : cmd      :                  : Describe the current sound device.
 soundlist                                : cmd      :                  : List all known sounds.
@@ -3114,10 +3131,12 @@ tf_mvm_bot_sniper_target_by_dps          : 1        : , "sv", "cheat"  : If set,
 tf_mvm_checkpoint                        : cmd      :                  : Save a checkpoint snapshot
 tf_mvm_checkpoint_clear                  : cmd      :                  : Clear the saved checkpoint
 tf_mvm_debugstats                        : cmd      :                  : Dumpout MvM Data
+tf_mvm_defenders_team_size               : 6        : , "sv", "nf", "rep" : Maximum number of defenders in MvM
 tf_mvm_disconnect_on_victory             : 0        : , "sv", "rep"    : Enable to Disconnect Players after completing MvM
 tf_mvm_engineer_teleporter_uber_duration : 5        : , "sv", "cheat"  :
 tf_mvm_force_victory                     : cmd      :                  : Force immediate victory.
 tf_mvm_jump_to_wave                      : cmd      :                  : Jumps directly to the given Mann Vs Machine wave number
+tf_mvm_max_connected_players             : 10       : , "sv"           : Maximum number of connected real players in MvM
 tf_mvm_min_players_to_start              : 3        : , "sv", "nf", "rep" : Minimum number of players connected to start a countdown timer
 tf_mvm_miniboss_scale                    : 1        : , "sv", "cheat", "rep" : Full body scale for minibosses.
 tf_mvm_missioncyclefile                  : 0        : , "sv"           : Name of the .res file used to cycle mvm misisons
@@ -3461,8 +3480,6 @@ vgui_drawtree_visible                    : 1        :                  : Draw th
 vgui_message_dialog_modal                : 1        : , "a", "cl"      :
 vgui_spew_fonts                          : cmd      :                  :
 vgui_togglepanel                         : cmd      :                  : show/hide vgui panel by name.
-video_quicktime_decode_gamma             : 0        : , "a"            : QuickTime Video Playback Gamma Target- 0=no gamma adjust  1=platform default gamma  2 = gamma 1.8  3 = gamma 2.2  4 = gamma 2.5
-video_quicktime_encode_gamma             : 3        : , "a"            : QuickTime Video Encode Gamma Target- 0=no gamma adjust  1=platform default gamma  2 = gamma 1.8  3 = gamma 2.2  4 = gamma 2.5
 viewanim_addkeyframe                     : cmd      :                  :
 viewanim_create                          : cmd      :                  : viewanim_create
 viewanim_load                            : cmd      :                  : load animation from file
@@ -3563,8 +3580,6 @@ vr_activate_default                      : 0        : , "a", "cl"      : If this
 vr_aim_yaw_offset                        : 90       : , "cl"           : This value is added to Yaw when returning the vehicle aim angles to Source.
 vr_cycle_aim_move_mode                   : cmd      :                  : Cycle through the aim & move modes.
 vr_deactivate                            : cmd      :                  : Switch from VR mode to normal mode
-vr_debug_nochromatic                     : 0        :                  :
-vr_debug_nodistortion                    : 0        :                  :
 vr_debug_remote_cam                      : 0        : , "cl"           :
 vr_debug_remote_cam_pos_x                : 150      : , "cl"           :
 vr_debug_remote_cam_pos_y                : 0        : , "cl"           :
@@ -3572,7 +3587,6 @@ vr_debug_remote_cam_pos_z                : 0        : , "cl"           :
 vr_debug_remote_cam_target_x             : 0        : , "cl"           :
 vr_debug_remote_cam_target_y             : 0        : , "cl"           :
 vr_debug_remote_cam_target_z             : -50      : , "cl"           :
-vr_distortion_enable                     : 1        :                  :
 vr_first_person_uses_world_model         : 1        : , "cl"           : Causes the third person model to be drawn instead of the view model
 vr_force_windowed                        : 0        : , "a", "cl"      :
 vr_hud_axis_lock_to_world                : 0        : , "a", "cl"      : Bitfield - locks HUD axes to the world - 0=pitch, 1=yaw, 2=roll
@@ -3587,15 +3601,11 @@ vr_moveaim_reticle_pitch_limit_zoom      : -1       : , "a", "cl"      : Beyond 
 vr_moveaim_reticle_yaw_limit             : 10       : , "a", "cl"      : Beyond this number of degrees, the mouse drags the torso
 vr_moveaim_reticle_yaw_limit_zoom        : 0        : , "a", "cl"      : Beyond this number of degrees, the mouse drags the torso
 vr_projection_znear_multiplier           : 0        : , "cl"           : Allows moving the ZNear plane to deal with body clipping
-vr_refresh_distortion_texture            : cmd      :                  :
 vr_render_hud_in_world                   : 1        : , "cl"           :
-vr_reset_home_pos                        : cmd      :                  : Sets the current HMD position as the zero point
 vr_stereo_mono_set_eye                   : 0        : , "cl"           : 0=off, Set all eyes to 1=left, 2=right, 3=middle eye
 vr_stereo_swap_eyes                      : 0        : , "cl"           : 1=swap eyes.
 vr_toggle                                : cmd      :                  : Toggles VR mode
-vr_track_reinit                          : cmd      :                  : Reinitializes HMD tracking
 vr_translation_limit                     : 10       : , "cl"           : How far the in-game head will translate before being clamped.
-vr_use_offscreen_render_target           : 0        :                  : Experimental: Use larger offscreen render target for pre-distorted scene in VR
 vr_viewmodel_offset_forward              : -8       : , "cl"           :
 vr_viewmodel_offset_forward_large        : -15      : , "cl"           :
 vr_viewmodel_translate_with_head         : 0        : , "cl"           : 1=translate the viewmodel with the head motion.
@@ -3614,7 +3624,6 @@ wc_destroy                               : cmd      :                  : When in
 wc_destroy_undo                          : cmd      :                  : When in WC edit mode restores the last deleted node
 wc_link_edit                             : cmd      :                  :
 weapon_showproficiency                   : 0        : , "sv"           :
-windows_speaker_config                   : 4        : , "a"            :
 wipe_nav_attributes                      : cmd      :                  : Clear all nav attributes of selected area.
 writeid                                  : cmd      :                  : Writes a list of permanently-banned user IDs to banned_user.cfg.
 writeip                                  : cmd      :                  : Save the ban list to banned_ip.cfg.
@@ -3633,5 +3642,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3623 total convars/concommands
+3632 total convars/concommands
 ```
