@@ -8,10 +8,10 @@ search:
 
 You can use user override files to customize specific settings in mastercomfig:
 
-* `autoexec.cfg`, which runs at game launch
-* Class configs (`scout.cfg`, `soldier.cfg`, `pyro.cfg`, `demoman.cfg`, `heavyweapons.cfg`, `engineer.cfg`,
-`medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class
-* `listenserver.cfg` which runs when first spawning in a local server
+- `autoexec.cfg`, which runs at game launch
+- Class configs (`scout.cfg`, `soldier.cfg`, `pyro.cfg`, `demoman.cfg`, `heavyweapons.cfg`, `engineer.cfg`,
+  `medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class
+- `listenserver.cfg` which runs when first spawning in a local server
 
 All of these files go into a folder called `overrides` you create in `tf/cfg`.
 
@@ -21,12 +21,12 @@ If there's something you'd like to run for all of your class configs, you can ad
 
 ## Utility Commands
 
-* `run_modules`: Applies modules. Useful for changing module levels in-game and then applying them all at once.
-* `apply_overrides`: Runs user modules, applies modules, and then runs user autoexec. Useful for changing your user overrides in-game.
-* `restore_preset`: Restores modules to preset defaults without using user overrides.
-* `restore_config`: Runs all of mastercomfig, and user overrides again, resetting changes made in-game.
-* `version_comfig`: Outputs the version of mastercomfig currently being used.
-* `switchconsole`: Command for toggling console and console output, reducing the performance impact of the console when toggled off.
+- `run_modules`: Applies modules. Useful for changing module levels in-game and then applying them all at once.
+- `apply_overrides`: Runs user modules, applies modules, and then runs user autoexec. Useful for changing your user overrides in-game.
+- `restore_preset`: Restores modules to preset defaults without using user overrides.
+- `restore_config`: Runs all of mastercomfig, and user overrides again, resetting changes made in-game.
+- `version_comfig`: Outputs the version of mastercomfig currently being used.
+- `switchconsole`: Command for toggling console and console output, reducing the performance impact of the console when toggled off.
 
 ## Game Overrides
 
@@ -34,20 +34,22 @@ Some modules set something called game overrides, which apply settings that over
 
 If you want to override this part of the module, you must use their game override alias in `tf/cfg/overrides/autoexec.cfg`. This comprises of an override alias, ran during game overrides, and an override option, which has the settings ran by the override alias.
 
-* `shadows`: Uses `shadowlod_override` to control the model quality shadows render with
-    * `shadowlod_low`: Uses the lowest model quality to render shadows
-    * `shadowlod_high`: Uses the highest model quality (at root LOD) to render shadows
+- `shadows`: Uses `shadowlod_override` to control the model quality shadows render with
 
-* `water`: Uses `cheap_water_override` to control the low quality water fade distance
-    * `cheap_water_full`: Always uses fully cheap water
-    * `cheap_water_partial`: Always uses partially cheap water, uses fully cheap water at a short distance
-    * `cheap_water_minimal`: Uses partially cheap water at a short distance, uses fully cheap water at a further distance
-    * `cheap_water_never`: Never uses any kind of cheap water
+  - `shadowlod_low`: Uses the lowest model quality to render shadows
+  - `shadowlod_high`: Uses the highest model quality (at root LOD) to render shadows
 
-* `props`: Uses `detail_props_override` to control grass/detail prop rendering and its render distance
-    * `detail_props_none`: Disables detail props
-    * `detail_props_medium`: Enables detail props, at a far distance, with no fade in
-    * `detail_props_full`: Enables detail props, at a far distance, with a gentle fade in
+- `water`: Uses `cheap_water_override` to control the low quality water fade distance
+
+  - `cheap_water_full`: Always uses fully cheap water
+  - `cheap_water_partial`: Always uses partially cheap water, uses fully cheap water at a short distance
+  - `cheap_water_minimal`: Uses partially cheap water at a short distance, uses fully cheap water at a further distance
+  - `cheap_water_never`: Never uses any kind of cheap water
+
+- `props`: Uses `detail_props_override` to control grass/detail prop rendering and its render distance
+  - `detail_props_none`: Disables detail props
+  - `detail_props_medium`: Enables detail props, at a far distance, with no fade in
+  - `detail_props_full`: Enables detail props, at a far distance, with a gentle fade in
 
 As an example, if you are using a lower water module, but do not want to use cheap water, you can add `alias cheap_water_override cheap_water_never`.
 
@@ -59,29 +61,27 @@ You can run them manually in your class config if you play a subclass, like Demo
 
 You can also re-alias them to use entirely custom network settings.
 
-* `net_projectiles`: Alias for network settings on projectile classes (Soldier, Pyro, Demoman, Medic) (`snapshot_buffer_low`).
-* `net_hitscan`: Alias for network settings on hitscan classes (Scout, Heavy, Engineer, Sniper) (`snapshot_buffer_safe`).
-* `net_spy`: Alias for network settings on Spy (`snapshot_buffer_safe`).
+- `net_projectiles`: Alias for network settings on projectile classes (Soldier, Pyro, Demoman, Medic) (`snapshot_buffer_low`).
+- `net_hitscan`: Alias for network settings on hitscan classes (Scout, Heavy, Engineer, Sniper) (`snapshot_buffer_safe`).
+- `net_spy`: Alias for network settings on Spy (`snapshot_buffer_safe`).
 
 ## Changing your preset
 
-mastercomfig supports selecting a preset after download. Add a file to your `overrides` folder called `pre_comfig.cfg`. In this file, put your desired preset as `preset=preset-name`. Preset names are:
+mastercomfig supports selecting a preset after download. Add a file to your `overrides` folder called `pre_comfig.cfg`. In this file, put your desired preset as `preset=presetname`. Preset names are:
 
-* none
-* ultra
-* high
-* medium-high
-* medium
-* medium-low
-* low
-* very-low
+- none
+- ultra
+- high
+- medium
+- low
+- destitute
 
 You can check the currently selected preset by entering `preset_level` into the console.
 
 ## Optional Aliases
 
 !!! warning
-    Optional aliases are **entirely optional** and are **only** for **advanced** customization.
+Optional aliases are **entirely optional** and are **only** for **advanced** customization.
 
 Your override preferences can have multiple options, sort of like presets! You can use this to have different quality choices or game configurations for different scenarios or moods.
 
@@ -111,7 +111,7 @@ Uses of `overrides/setup_hook.cfg` are rarer but still valid. With this, you can
 ## Optional User Config Template
 
 !!! warning
-    These steps are entirely optional and are only for advanced customization.
+These steps are entirely optional and are only for advanced customization.
 
 To get an idea about what to put in your `overrides/autoexec.cfg` and select options,
 you can download the autoexec template from the [latest release](https://github.com/mastercomfig/mastercomfig/releases/latest).
@@ -124,47 +124,48 @@ mastercomfig provides a set of handy debugging commands used during mastercomfig
 
 ### General
 
-* `debug_output`: Enable developer-only output (`debug_output_1`). It shows various warnings about potential issues and outputs console output to the corner of the screen.
-* `debug_output_toggle`: Cycle through all four modes (including disabled) for developer-only output. Different modes display different amounts of information.
-* `debug_output_display`: Display console output in the corner of the screen without showing additional information.
-* `debug_output_1`: Enable developer-only output level 1.
-* `debug_output_2`: Enable developer-only output level 2, which displays more information.
+- `debug_output`: Enable developer-only output (`debug_output_1`). It shows various warnings about potential issues and outputs console output to the corner of the screen.
+- `debug_output_toggle`: Cycle through all four modes (including disabled) for developer-only output. Different modes display different amounts of information.
+- `debug_output_display`: Display console output in the corner of the screen without showing additional information.
+- `debug_output_1`: Enable developer-only output level 1.
+- `debug_output_2`: Enable developer-only output level 2, which displays more information.
 
 ### Gameplay Testing
 
-* `debug_skipwaiting`: Skips the waiting for players time.
-* `debug_instant_respawn`: Turns on fully instant respawn.
-* `debug_invulnerable`: Toggles buddha mode (health cannot go below 1).
-* `debug_bots`: Fills the server with bots with AI.
-* `debug_target`: Adds a target bot, which can be damaged infinitely.
+- `debug_skipwaiting`: Skips the waiting for players time.
+- `debug_instant_respawn`: Turns on fully instant respawn.
+- `debug_invulnerable`: Toggles buddha mode (health cannot go below 1).
+- `debug_bots`: Fills the server with bots with AI.
+- `debug_target`: Adds a target bot, which can be damaged infinitely.
 
 ### Rendering
 
-* `debug_occlusion`: Turns on debugging of the occlusion system.
-* `debug_pixelvis`: Turns on debugging of the pixel visibility system.
-* `debug_fillrate`: Shows overdraw from repeated passes.
-* `debug_matsys_reload`: Reloads material system.
-* `debug_lookdev`: Hides the HUD and viewmodel, useful for visual comparisons.
+- `debug_occlusion`: Turns on debugging of the occlusion system.
+- `debug_pixelvis`: Turns on debugging of the pixel visibility system.
+- `debug_fillrate`: Shows overdraw from repeated passes.
+- `debug_matsys_reload`: Reloads material system.
+- `debug_lookdev`: Hides the HUD and viewmodel, useful for visual comparisons.
 
 ### Sound
 
-* `debug_sound_loads`: Dumps the current state of the sound memory pool and enables debug output for sound loads.
-* `debug_sound_dsp`: Enables debug output of DSP parameters of sounds and enables visualization for automatic room DSP.
+- `debug_sound_loads`: Dumps the current state of the sound memory pool and enables debug output for sound loads.
+- `debug_sound_dsp`: Enables debug output of DSP parameters of sounds and enables visualization for automatic room DSP.
 
 ### Network
-* `debug_network_packets`: Enables spew of each network packet sent and received, including compression information if relevant.
-* `debug_network_drops`: Enables debug output of outdated or duplicate packets.
-* `debug_network_graph`: Enables the full networking graph, which displays information about packet volume, interp timings, and packet rates.
-* `debug_network_pred`: Enables network prediction error logging.
+
+- `debug_network_packets`: Enables spew of each network packet sent and received, including compression information if relevant.
+- `debug_network_drops`: Enables debug output of outdated or duplicate packets.
+- `debug_network_graph`: Enables the full networking graph, which displays information about packet volume, interp timings, and packet rates.
+- `debug_network_pred`: Enables network prediction error logging.
 
 ### FPS
 
-* `debug_fps`: Enables the basic networking graph, which is handy for seeing FPS. Note that the graph has a noticeable performance impact.
-* `debug_fps_range`: Enables full FPS counter, which shows absolute FPS mins and maxes. You can re-run this command to reset the mins and maxes.
+- `debug_fps`: Enables the basic networking graph, which is handy for seeing FPS. Note that the graph has a noticeable performance impact.
+- `debug_fps_range`: Enables full FPS counter, which shows absolute FPS mins and maxes. You can re-run this command to reset the mins and maxes.
 
 ### Profiling
 
-* `debug_vprof_spikes`: Logs spikes below 100FPS (can be adjusted with `alias debug_vprof_spike "vprof_dump_spikes 100"`) to `tf/vprof_spikes.log` (can be adjusted with `alias debug_vprof_log_spike "con_logfile vprof_spike.log"`).
-* `debug_vprof_dump`: Logs profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log "con_logfile vprof.log"`). It can be re-run to reset timings data.
-* `debug_vprof_report`: Logs a longer set of inclusive profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log "con_logfile vprof.log"`). It can be re-run to reset timings data.
-* `debug_vprof_off`: Turns off profiling.
+- `debug_vprof_spikes`: Logs spikes below 100FPS (can be adjusted with `alias debug_vprof_spike "vprof_dump_spikes 100"`) to `tf/vprof_spikes.log` (can be adjusted with `alias debug_vprof_log_spike "con_logfile vprof_spike.log"`).
+- `debug_vprof_dump`: Logs profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log "con_logfile vprof.log"`). It can be re-run to reset timings data.
+- `debug_vprof_report`: Logs a longer set of inclusive profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log "con_logfile vprof.log"`). It can be re-run to reset timings data.
+- `debug_vprof_off`: Turns off profiling.

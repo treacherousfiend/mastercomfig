@@ -103,18 +103,18 @@ letter. Additional notes following the description are sentences.
 
 There are currently 4 categories for launch options:
 
-* `Recommended`: These are launch options everyone should be using, as they benefit all users
-* `Extra`: These are launch options people find to be personal preference or for use cases that cannot be applied to all users
-* `Uncommon`: These are launch options most people will not use, but will still satisfy a valid use case
-* `Experimental`: These are launch options that are being tested to be moved elsewhere as their effects are not clear
+- `Recommended`: These are launch options everyone should be using, as they benefit all users
+- `Extra`: These are launch options people find to be personal preference or for use cases that cannot be applied to all users
+- `Uncommon`: These are launch options most people will not use, but will still satisfy a valid use case
+- `Experimental`: These are launch options that are being tested to be moved elsewhere as their effects are not clear
 
 Put your launch option in the appropriate section and if it's in the
 `Recommended` section, add it to the launch options line for copying.
 
 Here are lists of launch options to help you out:
 
-* [Windows](https://docs.comfig.app/latest/tf2/launchopts_win/)
-* [Linux](https://docs.comfig.app/latest/tf2/launchopts_linux/)
+- [Windows](https://docs.comfig.app/latest/tf2/launchopts_win/)
+- [Linux](https://docs.comfig.app/latest/tf2/launchopts_linux/)
 
 Information about generating them can be found [here](https://docs.comfig.app/latest/tf2/#making-your-own-launch-options-list).
 
@@ -139,33 +139,21 @@ punctuation unless using multiple sentences.
 
 ConVars and commands are found using [these instructions](https://docs.comfig.app/latest/tf2/#making-your-own-cvar-list).
 
-* [Windows](https://docs.comfig.app/latest/tf2/cvarlist_win/)
-* [Linux](https://docs.comfig.app/latest/tf2/cvarlist_linux/)
+- [Windows](https://docs.comfig.app/latest/tf2/cvarlist_win/)
+- [Linux](https://docs.comfig.app/latest/tf2/cvarlist_linux/)
 
 Add your alternatives uncommented in the applicable presets/addons or use modules.
 
-##### Presets
-
-* `none`: Special preset which skips setting quality options
-* `ultra`: Absolute maximum quality, with even the slightest and most performance-intensive quality improvements included
-* `high`: Enables all graphical features without making them extremely high quality
-* `medium-high`: Disables unoptimized features and optimize the game without making it look bad
-* `medium`: The maximum performance you can get while enabling a few effects that may give you a slight edge
-* `medium-low`: The maximum performance you can get without making the game too hard to play because of awful visual quality and glitches
-* `low`: Maximum performance without caring much about visibility or possible bugs
-* `very-low`: Negatively affects playability by a lot and disables very essential features in desperation for performance
-
 ##### Addons
 
-* `no-footsteps`: Removes footstep sounds
-* `disable-pyroland`: Removes Pyroland map textures
-* `no-soundscapes`: Removes soundscapes (ambient map noise) and bird noises
-* `no-tutorial`: Disables tutorial messages and other popups
-* `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration, and 1:1 zoom sensitivity
-* `opengl`: Provides additional optimizations for OpenGL (macOS and Linux)
-* `transparent-viewmodels`: Enables support for transparent viewmodels
-* `null-canceling-movement`: Prevents you from pressing two opposing directions, which causes you to stop moving
-* `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (2GB and lower)
+- `no-footsteps`: Removes footstep sounds
+- `disable-pyroland`: Removes Pyroland map textures
+- `no-soundscapes`: Removes soundscapes (ambient map noise) and bird noises
+- `no-tutorial`: Disables tutorial messages and other popups
+- `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration, and 1:1 zoom sensitivity
+- `transparent-viewmodels`: Enables support for transparent viewmodels
+- `null-canceling-movement`: Prevents you from pressing two opposing directions, which causes you to stop moving
+- `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (2GB and lower)
 
 ##### Modules
 
@@ -175,9 +163,9 @@ the existing modules if applicable, then add documentation for it at the
 
 The first part of adding modules is a multi-step process in `config/mastercomfig/cfg/comfig/comfig.cfg`:
 
-* Add the module level alias(es) (`alias module_level "cvar1 1;cvar2 0`). For every command in the module, all levels must set that command unless there is no impact at that level.
-* Add the set module level alias(es) (`alias module=level"alias module module_level"`).
-* Possibly adjust presets in `config/cfg/presets` to use the new module or levels to an existing module.
+- Add the module level alias(es) (`alias module_level "cvar1 1;cvar2 0`). For every command in the module, all levels must set that command unless there is no impact at that level.
+- Add the set module level alias(es) (`alias module=level"alias module module_level"`).
+- Possibly adjust presets in `config/cfg/presets` to use the new module or levels to an existing module.
 
 If you are adding a new module, you will also need to add a new `module` entry in `config/mastercomfig/cfg/comfig/modules_run.cfg`
 
@@ -266,12 +254,12 @@ learn more about the dev scripts in
 
 To successfully package presets and addons you need:
 
-* Installed TF2 and Steam with all dependencies
-* bash and basic UNIX tools
-* [VPK](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix)
-* [gh](https://cli.github.com/)
-    * You must authenticate beforehand, for example using [gh auth login](https://cli.github.com/manual/gh_auth_login), or the `GH_TOKEN` env var
-* GNU parallel (optional)
+- Installed TF2 and Steam with all dependencies
+- bash and basic UNIX tools
+- [VPK](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix)
+- [gh](https://cli.github.com/)
+  - You must authenticate beforehand, for example using [gh auth login](https://cli.github.com/manual/gh_auth_login), or the `GH_TOKEN` env var
+- GNU parallel (optional)
 
 Additionally, to generate No Tutorial addon, you will need to create a new file
 in `dev/` called `mastercomfig-vars`, containing the following:

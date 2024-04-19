@@ -8,7 +8,7 @@ These are folders with addon files.
 
 ### mastercomfig-disable-pyroland-addon
 
-This is an addon which removes Pyroland map textures. It is used in the `low` and `very-low` presets by default.
+This is an addon which removes Pyroland map textures. It is used in the `low` and `destitute` presets by default.
 
 ### mastercomfig-flat-mouse-addon
 
@@ -24,15 +24,15 @@ This is an addon which aggressively reduces memory usage for low memory systems 
 
 ### mastercomfig-no-footsteps-addon
 
-This is an addon which removes footstep sounds. It is used only in the `very-low` preset by default.
+This is an addon which removes footstep sounds. It is used only in the `destitute` preset by default.
 
 ### mastercomfig-no-soundscapes-addon
 
-This is an addon which removes soundscapes (ambient map noise). It is used in the `low` and `very-low` presets by default.
+This is an addon which removes soundscapes (ambient map noise). It is used in the `low` and `destitute` presets by default.
 
 ### mastercomfig-no-tutorial-addon
 
-This is an addon which skips tutorial messages and map introduction videos. It is used only in the `very-low` preset by default.
+This is an addon which skips tutorial messages and map introduction videos. It is used only in the `destitute` preset by default.
 
 ### mastercomfig-null-canceling-movement-addon
 
