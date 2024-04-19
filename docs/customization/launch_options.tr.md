@@ -8,7 +8,7 @@ Steam kütüphanenizde Team Fortress 2'ye sağ tıklayın ve **Özellikler...** 
 her şeyi silin ve
 
 ```c
--novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime
+-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars
 ```
 
 seçeneklerini kutuya yapıştırın.
@@ -33,7 +33,7 @@ seçeneklerini kutuya yapıştırın.
 
 ## Önerilen Başlatma Seçenekleri
 
-`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime`
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`
 
 - **-novid** : Valve başlangıç logosunu devre dışı bırakır, zaman kazandırır.
 - **-nojoy** : Joystick sisteminin başlatılmasını durdurur; daha hızlı başlangıç ve daha az bellek kullanımı.
@@ -41,7 +41,6 @@ seçeneklerini kutuya yapıştırın.
 - **-nohltv** : SourceTV barındırmayı devre dışı bırakır; daha az kaynak kullanımı.
 - **-particles 1** : Işın sayısını minimum 512 ile sınırlar.
 - **-precachefontchars** : Ortak karakterler için yazı tipi oluşturmayı önbelleğe alır.
-- **-noquicktime** : Quicktime'ı başlatmayı devre dışı bırakır. Yeniden oynatma özelliğini kullanıyorsanız, bu seçeneği kullanmayın. Linux'ta hiçbir şey yapmaz.
 
 ## Ek Başlatma Seçenekleri
 
@@ -53,7 +52,6 @@ seçeneklerini kutuya yapıştırın.
     * **-no_texture_stream** : Doku akışını devre dışı bırakır. Hızlı doku erişimi olan ve görüntü belleğinin baskısında olmayan güçlü bir sisteminiz varsa kullanışlıdır.
     * **-autoconfig** : Grafik kalitesini donanımınız için önerilene sıfırlar. None Ön Ayarı ile kullanışlı olarak çalışır. İlk başlatmadan sonra kaldırın.
     * **-freq x** : Yenileme hızını, TF2 otomatik olarak algılamadığında belirlenen değer için zorlar. Örneğin, 144hz bir monitörünüz varsa `-freq 144` için x 144 olmalıdır.
-    * **-r_emulate_gl** : OpenGL garipliklerine ve destek seviyelerine uyum sağlamak için görselleştirme hattını değiştirir, hâlâ DirectX kullanarak çalışmaktadır.
 
 === "macOS"
 

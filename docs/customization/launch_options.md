@@ -9,7 +9,7 @@ In the window that appears, under **Launch Options**, remove anything that's in
 there and paste
 
 ```c
--novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime
+-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars
 ```
 
 into the box and click ok.
@@ -36,7 +36,7 @@ Read below about optional launch options and choosing your own DXLevel.
 
 ## Recommended Launch Options
 
-`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime`
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`
 
 - **-novid** : disables Valve startup logo, saves time
 - **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
@@ -44,7 +44,6 @@ Read below about optional launch options and choosing your own DXLevel.
 - **-nohltv** : disables SourceTV hosting, less resource usage
 - **-particles 1** : limits beam count to the minimum of 512
 - **-precachefontchars** : precaches font rendering for common characters
-- **-noquicktime** : disables initializing Quicktime. If you use the replay rendering feature, do not use this. Does not do anything on Linux
 
 ## Extra Launch Options
 
@@ -56,7 +55,6 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after the first launch.
     * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`.
-    * **-r_emulate_gl** : changes rendering pipeline to accommodate OpenGL quirks and support levels, still runs using DirectX
 
 === "macOS"
 
@@ -113,3 +111,6 @@ DirectX 8 also does not properly support many features of the game, including wa
 For these reasons and more, it is recommended that you use the DirectX versions listed above. But for those who are wondering, mastercomfig is still compatible
 with your current DirectX 8 configurations. It does not override or change DirectX level.
 So if you use a DirectX 8 launch option, you can continue to use it keeping the above in mind.
+
+!!! warning
+There are also reports of DirectX 8 not working after the 64-bit update or causing crashes.
