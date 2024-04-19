@@ -663,7 +663,7 @@ Default setting: **`vsync=off`** (all presets).
 
 Toggles the live 3D player model in the corner of your screen.
 
-* **CPU usage:** high
+* **CPU usage:** low
 * **GPU usage:** medium
 
 Default setting: based on which preset you are currently using.
