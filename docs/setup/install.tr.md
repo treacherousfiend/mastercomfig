@@ -1,6 +1,7 @@
 ---
 description: mastercomfig'in nasıl düzgünce kurulacağına dair adımlar.
 ...
+
 # mastercomfig nasıl kurulur
 
 1. Seçtiğiniz mastercomfig VPK dosyalarını [indirin](https://comfig.app/app).
@@ -10,7 +11,7 @@ description: mastercomfig'in nasıl düzgünce kurulacağına dair adımlar.
 5. Göz At yazısına tıklayın.
 6. `tf/custom` klasörüne girin.
 7. VPK dosyalarını bu klasöre sürükleyin.
-8. Bu başlatma seçeneklerini ayarlayın: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime`. Daha fazla bilgi için [başlatma seçenekleri özelleştirme rehberini](../customization/launch_options.md) okuyun.
+8. Bu başlatma seçeneklerini ayarlayın: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`. Daha fazla bilgi için [başlatma seçenekleri özelleştirme rehberini](../customization/launch_options.md) okuyun.
 
 ## Özel configler
 
@@ -34,7 +35,7 @@ spy.cfg
 2. Bu dosyaları yeni oluşturulan `overrides` klasörüne taşıyın.
 
 !!! İpucu
-   Gerekli olmamakla birlikte, başka dosyaları (örneğin `binds.cfg`) taşırsanız, `exec` komutunu `exec binds.cfg`'den `exec overrides/binds.cfg`'ye güncellemeniz gerekecektir.
+Gerekli olmamakla birlikte, başka dosyaları (örneğin `binds.cfg`) taşırsanız, `exec` komutunu `exec binds.cfg`'den `exec overrides/binds.cfg`'ye güncellemeniz gerekecektir.
 
 ## Sonraki Adımlar
 
@@ -46,9 +47,9 @@ Herhangi bir sorunla mı karşılaşıyorsunuz? Yardım için [Hızlı Çözüml
 
 TF2'yi daha da kişiselleştirmek ister misiniz?
 
-* Nasıl [bireysel ayarları özelleştirebileceğinizi](../customization/custom_configs.md) görün
-* Bir dizi ayarı bir anda kolayca özelleştirmek ister misiniz? [Modül sistemine göz atın](../customization/modules.md)
-* Sisteminizden daha iyi performans ve kalite elde etmek için [başlatma seçeneklerini](../customization/launch_options.md) düzenleyin
-* Diğer insanların [özel configlerinden](../customization/custom_config_list.md) ilham alın
-* Diğer [mükemmel TF2 modifikasyonlarına](../customization/see_also.md) bir göz atın
-* Daha da fazla performans elde etmek için [işletim sisteminizi optimize edin](../os/index.md)
+- Nasıl [bireysel ayarları özelleştirebileceğinizi](../customization/custom_configs.md) görün
+- Bir dizi ayarı bir anda kolayca özelleştirmek ister misiniz? [Modül sistemine göz atın](../customization/modules.md)
+- Sisteminizden daha iyi performans ve kalite elde etmek için [başlatma seçeneklerini](../customization/launch_options.md) düzenleyin
+- Diğer insanların [özel configlerinden](../customization/custom_config_list.md) ilham alın
+- Diğer [mükemmel TF2 modifikasyonlarına](../customization/see_also.md) bir göz atın
+- Daha da fazla performans elde etmek için [işletim sisteminizi optimize edin](../os/index.md)
