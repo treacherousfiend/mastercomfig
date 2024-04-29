@@ -2,10 +2,14 @@
   "graphics.textures": {
     "very_low": {
       "mat_picmip": 2,
+      "mat_filtertextures": 0,
+      "mat_filterlightmaps": 0,
       "mat_disable_fancy_blending": 1
     },
     "low": {
-      "mat_disable_fancy_blending": 0
+      "mat_disable_fancy_blending": 0,
+      "mat_filtertextures": 1,
+      "mat_filterlightmaps": 1
     },
     "medium": {
       "mat_picmip": 0
@@ -23,7 +27,9 @@
       "r_rootlod": 1
     },
     "high": {
-      "r_rootlod": 0,
+      "r_rootlod": 0
+    },
+    "ultra": {
       "r_lod": 0
     }
   },
@@ -37,41 +43,45 @@
       "r_shadowlod": -2
     },
     "low": {
-      "r_shadows": 1,
-      "cl_blobbyshadows": 1
-    },
-    "medium": {
-      "r_shadowrendertotexture": 1,
-      "cl_blobbyshadows": 0,
-      "r_shadowmaxrendered": 11,
-      "nb_shadow_dist": 400
+      "r_shadows": 1
     },
     "high": {
+      "r_shadowrendertotexture": 1,
+      "cl_blobbyshadows": 0,
+      "r_shadowmaxrendered": 23,
+      "nb_shadow_dist": 400
+    },
+    "ultra": {
       "r_shadowmaxrendered": 160,
       "nb_shadow_dist": 8192,
       "r_shadowlod": 0
     }
   },
   "graphics.lighting": {
-    "low": {
+    "very_low": {
+      "r_ambientboost": 0,
       "r_lightaverage": 0,
-      "r_worldlights": 0,
-      "mat_disable_lightwarp": 1,
-      "r_pixelvisibility_partial": 0,
       "r_dynamic": 0,
       "r_maxdlights": 0,
-      "mat_use_compressed_hdr_textures": 0
+      "r_worldlightmin": 999999,
+      "r_worldlights": 0,
+      "mat_disable_lightwarp": 1,
+      "r_pixelvisibility_partial": 0
+    },
+    "low": {
+      "r_worldlightmin": 0.0002
     },
     "medium": {
+      "r_ambientboost": 1,
       "r_lightaverage": 1,
-      "r_worldlights": 2,
+      "r_dynamic": 1,
+      "r_maxdlights": 1,
+      "r_worldlights": 4,
       "mat_disable_lightwarp": 0,
-      "r_pixelvisibility_partial": 1,
-      "mat_use_compressed_hdr_textures": 1
+      "r_pixelvisibility_partial": 1
     },
     "high": {
-      "r_worldlights": 4,
-      "r_dynamic": 1,
+      "r_worldlightmin": 0.000001,
       "r_maxdlights": 32
     }
   },
@@ -93,13 +103,13 @@
   },
   "graphics.decals": {
     "off": {
-      "mp_decals": 0,
+      "mp_decals": 1,
       "r_drawbatchdecals": 0,
       "r_decalstaticprops": 0,
       "r_drawmodeldecals": 0
     },
     "low": {
-      "mp_decals": 9,
+      "mp_decals": 32,
       "r_drawbatchdecals": 1
     },
     "medium": {
@@ -109,12 +119,11 @@
       "r_maxmodeldecal": 9
     },
     "high": {
-      "mp_decals": 2048,
+      "mp_decals": 512,
       "r_maxmodeldecal": 50
     }
   },
-  "graphics.map_art": {
-  },
+  "graphics.map_art": {},
   "graphics.world_detail": {
     "low": {
       "r_3dsky": 0,
@@ -288,31 +297,28 @@
       "props_break_max_pieces": -1,
       "tf_playergib": 1
     },
-    "bloody": {
-      "cl_burninggibs": 1,
+    "bloody_low": {
       "violence_hgibs": 0,
       "violence_hblood": 0,
       "violence_agibs": 0,
       "violence_ablood": 0
+    },
+    "bloody_high": {
+      "cl_burninggibs": 1
     }
   },
   "post_processing.bloom": {
     "off": {
       "mat_hdr_level": 0,
-      "mat_colorcorrection": 0,
-      "mat_colcorrect_disableentities": 1,
       "r_bloomtintr": 0.2126,
       "r_bloomtintg": 0.7152,
       "r_bloomtintb": 0.0722,
-      "r_bloomtintexponent": 1,
+      "r_bloomtintexponent": 2.2,
       "mat_bloom_scalefactor_scalar": 1,
       "r_shader_srgb": 0
     },
     "default": {
-      "mat_hdr_level": 2,
-      "mat_colorcorrection": 1,
-      "mat_colcorrect_disableentities": 0,
-      "r_bloomtintexponent": 2.2
+      "mat_hdr_level": 2
     },
     "calm": {
       "mat_bloom_scalefactor_scalar": 0.25
@@ -352,10 +358,6 @@
       "pyro_vignette_distortion": 0
     }
   },
-  "sound.quality": {
-
-  },
-  "sound.voice": {
-
-  }
+  "sound.quality": {},
+  "sound.voice": {}
 }
