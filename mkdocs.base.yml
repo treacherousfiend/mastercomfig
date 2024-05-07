@@ -8,7 +8,6 @@ copyright: >-
   trademarks and/or registered trademarks of Valve Corporation in the U.S.
   and/or other countries.<br><br>mastercomfig is not sponsored, endorsed,
   licensed by, or affiliated with Valve Corporation.
-strict: true
 nav:
   - About:
       - Home: index.md
