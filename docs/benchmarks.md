@@ -12,11 +12,7 @@ Thus, it's highly appreciated to benchmark mastercomfig and any changes you make
 
 ## How to benchmark
 
-!!! note
-    The benchmark was made incompatible with the July 25, 2023 update.
-    You will need to switch to the Pre-07-25-23 Demo Playback beta in order to play the file. A new benchmark is being worked on.
-
-1. Download [the benchmark file](https://mega.nz/file/f8tlhDhR#nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k).
+1. Download the [`sbmrk24` 24-player benchmark file](https://drive.google.com/file/d/1xbuiBnZb301EXFyYuQP17KS21AWM_v5o/view) by shounic.
 2. Move it to the `tf/` folder.
 3. Launch the game.
 4. Enter `timedemo benchmark_test`

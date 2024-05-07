@@ -12,8 +12,7 @@ resultant `viewed.res` into the No Tutorial addon's `media` folder.
 
 ## Packaging
 
-This creates the necessary files for releases (VPKs for addons and presets,
-and the autoexecs for cfg.tf).
+This creates the necessary files for releases (VPKs for addons and presets).
 
 ### Presets
 

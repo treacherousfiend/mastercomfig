@@ -28,16 +28,16 @@ If launching TF2 from Lutris, "Enable Feral GameMode" is likely enabled by defau
 
 - Games -> right-click Team Fortress 2 -> Configure -> System options
 
-## irqbalance
-
-Balance IRQ interrupts across multiple cores by installing the `irqbalance` package on your distro and then enabling the `irqbalance.service`, likely by `sudo systemctl enable --now irqbalance.service`.
-This package is installed on most Debian-based OS by default, like Ubuntu and Linux Mint.
-
 ## Ananicy Cpp
 
 You can install `schedtool` and [Ananicy Cpp](https://gitlab.com/ananicy-cpp/ananicy-cpp), then enable `ananicy-cpp.service` to automatically apply rule-based process priority balancing, improving resources allocated to TF2.
 
 This, however, requires a [profile for TF2](https://github.com/Nefelim4ag/Ananicy/blob/master/ananicy.d/00-default/games/_steam.rules). Follow Ananicy Cpp's [profile import instructions](https://gitlab.com/ananicy-cpp/ananicy-cpp#community-rules) to use community profiles from the original Ananicy software, which can be downloaded [here](https://github.com/Nefelim4ag/Ananicy) or by installing the original Ananicy.
+
+## irqbalance
+
+Balance IRQ interrupts across multiple cores by installing the `irqbalance` package on your distro and then enabling the `irqbalance.service`, likely by `sudo systemctl enable --now irqbalance.service`.
+This package is installed on most Debian-based OS by default, like Ubuntu and Linux Mint.
 
 ## Networking optimization
 
