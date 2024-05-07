@@ -1,5 +1,9 @@
 # Creating a Custom Video Intro for Team Fortress 2
 
+!!! note
+    TF2 uses webm instead of Bink now. You can simply convert a video into webm using ffmpeg or any export/converter program, and put the webm file into the `media/` folder and list it in startupvids.txt.
+    The original guide is left below for archival purposes, and if you need help about the `media/` folder, it contains some instructions about it.
+
 _Originally posted by omnibombulator on huds.tf_
 
 I was messing around with the TF2 files and stumbled across how the game chooses it’s intro video to play on launch. I was interested to see if I could make a Custom Intro, and it turns out it’s really easy.
