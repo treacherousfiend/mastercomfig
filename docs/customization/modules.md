@@ -243,7 +243,7 @@ Default setting: based on which preset you are currently using.
 - **`effects=low`**: Disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes, disables temp ent (syringe) collision. Disables monitors.
 - **`effects=medium`**: Disables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes, disables temp ent (syringe) collision. 512x render resolution for monitors.
 - **`effects=high`**: Disables shell casing ejection, disables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 1K render resolution for monitors.
-- **`effects=ultra`**: Enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 4K render resolution for monitors.
+- **`effects=ultra`**: Enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 2K render resolution for monitors.
 
 ### Water
 
@@ -260,7 +260,7 @@ Default setting: based on which preset you are currently using.
 - **`water=medium_high`**: Uses standard water with basic reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
 - **`water=high`**: Uses standard water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
 - **`water=very_high`**: Uses high quality water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 2K water render resolution.
-- **`water=ultra`**: Uses high quality water with all reflections. Never fades out to low quality water. 4K water render resolution.
+- **`water=ultra`**: Uses high quality water with all reflections. Never fades out to low quality water. 2K water render resolution.
 
 ### Particles
 
@@ -406,7 +406,7 @@ Default setting: based on which preset you are currently using.
 - **`decals=low`**: 9 max decals.
 - **`decals=medium`** 32 max decals.
 - **`decals=high`**: 80 max decals.
-- **`decals=ultra`**: 2048 max decals.
+- **`decals=ultra`**: 512 max decals.
 
 ### Model Decals
 
