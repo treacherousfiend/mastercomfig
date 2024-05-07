@@ -35,7 +35,7 @@ spy.cfg
 2. Drag these files into the newly created `overrides` folder.
 
 !!! tip
-Although not required, if you move any other files (for example, `binds.cfg`), you will have to update the `exec` command from `exec binds.cfg` to `exec overrides/binds.cfg`.
+    Although not required, if you move any other files (for example, `binds.cfg`), you will have to update the `exec` command from `exec binds.cfg` to `exec overrides/binds.cfg`.
 
 ## Next Steps
 

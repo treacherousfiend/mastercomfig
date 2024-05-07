@@ -103,7 +103,7 @@ For both methods the crosshair is created by inserting a new control in `HudLayo
     }
     ```
 
-4. Create the control in `HudLayout.res`, examples are below under [Examples](#Examples).
+4. Create the control in `HudLayout.res`, examples are below.
 
 Example:
 

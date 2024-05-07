@@ -35,7 +35,7 @@ Many people and organizations have helped or inspired mastercomfig in some way:
 
 - jane for the shrinkKeyValues bash script
 
-- Fraklin for modules template and module/preset previews with accompanying cfg script
+- Fraklin for module/preset previews with accompanying cfg script
 
 - Lucy for explosion screenshots and accompanying cfg script
 

@@ -16,11 +16,19 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	arena_lumberyard_event
+	{
+		"viewed"		"16"
+	}
 	arena_nucleus
 	{
 		"viewed"		"16"
 	}
 	arena_offblast_final
+	{
+		"viewed"		"16"
+	}
+	arena_perks
 	{
 		"viewed"		"16"
 	}
@@ -48,7 +56,23 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	cp_altitude
+	{
+		"viewed"		"16"
+	}
+	cp_ambush_event
+	{
+		"viewed"		"16"
+	}
 	cp_badlands
+	{
+		"viewed"		"16"
+	}
+	cp_brew
+	{
+		"viewed"		"16"
+	}
+	cp_carrier
 	{
 		"viewed"		"16"
 	}
@@ -61,6 +85,10 @@ viewed.res
 		"viewed"		"16"
 	}
 	cp_degrootkeep
+	{
+		"viewed"		"16"
+	}
+	cp_degrootkeep_rats
 	{
 		"viewed"		"16"
 	}
@@ -84,6 +112,10 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	cp_frostwatch
+	{
+		"viewed"		"16"
+	}
 	cp_gorge
 	{
 		"viewed"		"16"
@@ -100,11 +132,23 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	cp_gravelpit_snowy
+	{
+		"viewed"		"16"
+	}
 	cp_gullywash_final1
 	{
 		"viewed"		"16"
 	}
+	cp_hardwood_final
+	{
+		"viewed"		"16"
+	}
 	cp_junction_final
+	{
+		"viewed"		"16"
+	}
+	cp_lavapit_final
 	{
 		"viewed"		"16"
 	}
@@ -136,6 +180,10 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	cp_reckoner
+	{
+		"viewed"		"16"
+	}
 	cp_snakewater_final1
 	{
 		"viewed"		"16"
@@ -144,11 +192,19 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	cp_spookeyridge
+	{
+		"viewed"		"16"
+	}
 	cp_standin_final
 	{
 		"viewed"		"16"
 	}
 	cp_steel
+	{
+		"viewed"		"16"
+	}
+	cp_sulfur
 	{
 		"viewed"		"16"
 	}
@@ -180,7 +236,15 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	ctf_crasher
+	{
+		"viewed"		"16"
+	}
 	ctf_doublecross
+	{
+		"viewed"		"16"
+	}
+	ctf_doublecross_snowy
 	{
 		"viewed"		"16"
 	}
@@ -188,7 +252,15 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	ctf_frosty
+	{
+		"viewed"		"16"
+	}
 	ctf_gorge
+	{
+		"viewed"		"16"
+	}
+	ctf_haarp
 	{
 		"viewed"		"16"
 	}
@@ -196,7 +268,15 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	ctf_helltrain_event
+	{
+		"viewed"		"16"
+	}
 	ctf_landfall
+	{
+		"viewed"		"16"
+	}
+	ctf_pelican_peak
 	{
 		"viewed"		"16"
 	}
@@ -213,6 +293,10 @@ viewed.res
 		"viewed"		"16"
 	}
 	ctf_turbine
+	{
+		"viewed"		"16"
+	}
+	ctf_turbine_winter
 	{
 		"viewed"		"16"
 	}
@@ -236,6 +320,10 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	koth_cascade
+	{
+		"viewed"		"16"
+	}
 	koth_harvest_event
 	{
 		"viewed"		"16"
@@ -252,6 +340,10 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	koth_krampus
+	{
+		"viewed"		"16"
+	}
 	koth_lakeside_event
 	{
 		"viewed"		"16"
@@ -261,6 +353,10 @@ viewed.res
 		"viewed"		"16"
 	}
 	koth_lazarus
+	{
+		"viewed"		"16"
+	}
+	koth_los_muertos
 	{
 		"viewed"		"16"
 	}
@@ -284,7 +380,19 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	koth_rotunda
+	{
+		"viewed"		"16"
+	}
 	koth_sawmill
+	{
+		"viewed"		"16"
+	}
+	koth_sawmill_event
+	{
+		"viewed"		"16"
+	}
+	koth_sharkbay
 	{
 		"viewed"		"16"
 	}
@@ -296,7 +404,19 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	koth_slime
+	{
+		"viewed"		"16"
+	}
+	koth_snowtower
+	{
+		"viewed"		"16"
+	}
 	koth_suijin
+	{
+		"viewed"		"16"
+	}
+	koth_synthetic_event
 	{
 		"viewed"		"16"
 	}
@@ -356,11 +476,27 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	pd_farmageddon
+	{
+		"viewed"		"16"
+	}
+	pd_galleria
+	{
+		"viewed"		"16"
+	}
+	pd_mannsylvania
+	{
+		"viewed"		"16"
+	}
 	pd_monster_bash
 	{
 		"viewed"		"16"
 	}
 	pd_pit_of_death_event
+	{
+		"viewed"		"16"
+	}
+	pd_selbyen
 	{
 		"viewed"		"16"
 	}
@@ -388,7 +524,35 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	pl_breadspace
+	{
+		"viewed"		"16"
+	}
 	pl_cactuscanyon
+	{
+		"viewed"		"16"
+	}
+	pl_camber
+	{
+		"viewed"		"16"
+	}
+	pl_cashworks
+	{
+		"viewed"		"16"
+	}
+	pl_chilly
+	{
+		"viewed"		"16"
+	}
+	pl_coal_event
+	{
+		"viewed"		"16"
+	}
+	pl_corruption
+	{
+		"viewed"		"16"
+	}
+	pl_emerge
 	{
 		"viewed"		"16"
 	}
@@ -401,6 +565,10 @@ viewed.res
 		"viewed"		"16"
 	}
 	pl_frontier_final
+	{
+		"viewed"		"16"
+	}
+	pl_frostcliff
 	{
 		"viewed"		"16"
 	}
@@ -420,6 +588,10 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	pl_phoenix
+	{
+		"viewed"		"16"
+	}
 	pl_pier
 	{
 		"viewed"		"16"
@@ -432,11 +604,27 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	pl_rumford_event
+	{
+		"viewed"		"16"
+	}
+	pl_sludgepit_event
+	{
+		"viewed"		"16"
+	}
 	pl_snowycoast
 	{
 		"viewed"		"16"
 	}
+	pl_spineyard
+	{
+		"viewed"		"16"
+	}
 	pl_swiftwater_final1
+	{
+		"viewed"		"16"
+	}
+	pl_terror_event
 	{
 		"viewed"		"16"
 	}
@@ -448,11 +636,23 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	pl_venice
+	{
+		"viewed"		"16"
+	}
 	pl_wutville_event
 	{
 		"viewed"		"16"
 	}
 	plr_bananabay
+	{
+		"viewed"		"16"
+	}
+	plr_hacksaw
+	{
+		"viewed"		"16"
+	}
+	plr_hacksaw_event
 	{
 		"viewed"		"16"
 	}
@@ -493,6 +693,42 @@ viewed.res
 		"viewed"		"16"
 	}
 	tr_target
+	{
+		"viewed"		"16"
+	}
+	vsh_distillery
+	{
+		"viewed"		"16"
+	}
+	vsh_nucleus
+	{
+		"viewed"		"16"
+	}
+	vsh_skirmish
+	{
+		"viewed"		"16"
+	}
+	vsh_tinyrock
+	{
+		"viewed"		"16"
+	}
+	zi_atoll
+	{
+		"viewed"		"16"
+	}
+	zi_devastation_final1
+	{
+		"viewed"		"16"
+	}
+	zi_murky
+	{
+		"viewed"		"16"
+	}
+	zi_sanitarium
+	{
+		"viewed"		"16"
+	}
+	zi_woods
 	{
 		"viewed"		"16"
 	}

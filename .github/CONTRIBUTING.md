@@ -169,8 +169,7 @@ The first part of adding modules is a multi-step process in `config/mastercomfig
 
 If you are adding a new module, you will also need to add a new `module` entry in `config/mastercomfig/cfg/comfig/modules_run.cfg`
 
-You also have to add your new module or levels to `data/modules.json` for download site support
-and to `config/templates/modules/modules.cfg`.
+You also have to add your new module or levels to `data/modules.json` for app support.
 
 #### Texture preload list
 
@@ -186,17 +185,6 @@ The `scripts/client_precache.txt` file is similar to the texture preload list, b
 Also similarly to the texture preload list, strip any nonexistent entries
 and then add your changes, making sure that the entries in the precache are
 common enough to warrant the extra startup time and memory usage.
-
-#### Shader cache
-
-The OpenGL shader pair cache is located at `glbaseshaders.cfg` and `glbaseshaders_osx.cfg`.
-This is a value store for each shader program, which is an indexed subkey. The first value
-is the vertex shader name, the second is the pixel shader name, third is the vertex shader
-static index, fourth is the pixel shader static index, fifth is the vertex shader dynamic index,
-and sixth is the pixel shader dynamic index.
-
-These files specify what shaders the game should precache, as a base. It also saves encountered shaders
-to `glshaders.cfg`, which is precached on top of the base.
 
 #### DX support
 
