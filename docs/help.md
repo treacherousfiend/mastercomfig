@@ -12,9 +12,9 @@ Looking for help with mastercomfig?
 
 Check these resources out:
 
-* [Quick Fixes guide](next_steps/quick_fixes.md)
-* [Setup Instructions](setup/clean_up.md)
+- [Quick Fixes guide](next_steps/quick_fixes.md)
+- [Setup Instructions](setup/clean_up.md)
 
 Still can't find your answer and want to ask for help?
 
-* [Ask in help-forums on Discord](https://discord.gg/mastercomfig-389089828249010188)
+- [Ask in help-forums on Discord](https://discord.gg/mastercomfig-389089828249010188)
