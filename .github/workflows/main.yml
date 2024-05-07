@@ -36,8 +36,7 @@ jobs:
           rm -f /home/runner/.local/bin/vpk
           sudo bash -c 'cat <<\EOF > /usr/local/bin/vpk
           #!/bin/bash
-          REPO_NAME=${GITHUB_REPOSITORY#*/}
-          python "$GITHUB_WORKSPACE/$REPO_NAME/dev/vpk_cli.py" "${@}"
+          python "$GITHUB_WORKSPACE/dev/vpk_cli.py" "${@}"
           EOF'
           sudo chmod +x /usr/local/bin/vpk
       - name: Check tag
