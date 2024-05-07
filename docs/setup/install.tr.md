@@ -35,7 +35,7 @@ spy.cfg
 2. Bu dosyaları yeni oluşturulan `overrides` klasörüne taşıyın.
 
 !!! İpucu
-Gerekli olmamakla birlikte, başka dosyaları (örneğin `binds.cfg`) taşırsanız, `exec` komutunu `exec binds.cfg`'den `exec overrides/binds.cfg`'ye güncellemeniz gerekecektir.
+    Gerekli olmamakla birlikte, başka dosyaları (örneğin `binds.cfg`) taşırsanız, `exec` komutunu `exec binds.cfg`'den `exec overrides/binds.cfg`'ye güncellemeniz gerekecektir.
 
 ## Sonraki Adımlar
 

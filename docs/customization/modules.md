@@ -19,7 +19,7 @@ textures=high
 will set the texture quality to `high`.
 
 !!! note
-If you do not have `overrides` folder, create one. The same goes for the `modules.cfg` file.
+    If you do not have `overrides` folder, create one. The same goes for the `modules.cfg` file.
 
 ## Hardware usage levels
 
@@ -43,7 +43,7 @@ You can also view selected levels for all modules by entering `module_levels` in
 ### Advanced
 
 !!! warning
-These steps are entirely optional and are only for advanced customization.
+    These steps are entirely optional and are only for advanced customization.
 
 #### Module level aliases
 
@@ -119,7 +119,7 @@ Default setting: **`packet_size=large`** (all presets).
 Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).
 
 !!! note
-This does not increase data usage. It only restricts how quickly the game can send data.
+    This does not increase data usage. It only restricts how quickly the game can send data.
 
 - **CPU usage:** low
 - **GPU usage:** none
@@ -233,7 +233,7 @@ Default setting: **`flashlight=off`** (all presets).
 Controls weapon and other miscellaneous effects.
 
 !!! note
-The way TF2 uses these settings is inconsistent and may not apply in all cases.
+    The way TF2 uses these settings is inconsistent and may not apply in all cases.
 
 - **CPU usage:** medium
 - **GPU usage:** medium
@@ -334,13 +334,13 @@ Default setting: **`motion_blur=off`** (all presets).
 Controls MSAA anti-aliasing.
 
 !!! warning
-On Linux and macOS, enabling causes TF2 to do a slow full clear on AMD cards!
+    On Linux and macOS, enabling causes TF2 to do a slow full clear on AMD cards!
 
 !!! warning
-On Linux, enabling may cause rendering errors with Wayland.
+    On Linux, enabling may cause rendering errors with Wayland.
 
 !!! warning
-On Windows, enabling MSAA may increase input latency on non-exclusive fullscreen modes.
+    On Windows, enabling MSAA may increase input latency on non-exclusive fullscreen modes.
 
 - **CPU usage:** none
 - **GPU usage:** medium
@@ -357,7 +357,7 @@ Default setting: based on which preset you are currently using.
 Controls texture smoothing/filtering.
 
 !!! warning
-Texture filtering will only work on `textures=low` and higher.
+    Texture filtering will only work on `textures=low` and higher.
 
 - **CPU usage:** none
 - **GPU usage:** low
@@ -376,7 +376,7 @@ Default setting: based on which preset you are currently using.
 Adjusts characters details.
 
 !!! tip
-Facial animations will only work on `lod=medium` and higher.
+    Facial animations will only work on `lod=medium` and higher.
 
 - **CPU usage:** high
 - **GPU usage:** low
@@ -395,7 +395,7 @@ Default setting: based on which preset you are currently using.
 Controls bullet holes and overall decal support.
 
 !!! note
-In the Very Low preset, decals are forced invisible.
+    In the Very Low preset, decals are forced invisible.
 
 - **CPU usage:** medium
 - **GPU usage:** medium
@@ -532,7 +532,7 @@ Default setting: based on which preset you are currently using.
 Controls how fast the animation is on the killstreak sheen glow for weapons.
 
 !!! warning
-Killstreak sheens do not work on DirectX 8.
+    Killstreak sheens do not work on DirectX 8.
 
 - **CPU usage:** none
 - **GPU usage:** none
@@ -549,10 +549,10 @@ Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
 Controls how intense the color tint is on the killstreak sheen glow for weapons.
 
 !!! note
-This module will have no effect if `sheens_speed` is set to `off`.
+    This module will have no effect if `sheens_speed` is set to `off`.
 
 !!! warning
-Killstreak sheens do not work on DirectX 8.
+    Killstreak sheens do not work on DirectX 8.
 
 - **CPU usage:** none
 - **GPU usage:** none
@@ -644,10 +644,10 @@ Default setting: **`fpscap=400`** (all presets).
 Controls VSync, which removes screen tearing by syncing FPS to your monitor's refresh rate, at the cost of increased input latency.
 
 !!! warning
-If your FPS does not reach your refresh rate, it will drop to the next lowest divisor (for example, 30FPS with a 60Hz monitor).
+    If your FPS does not reach your refresh rate, it will drop to the next lowest divisor (for example, 30FPS with a 60Hz monitor).
 
 !!! tip
-It's recommended to keep this off, and use NVidia Adaptive VSync, which keeps VSync on only when the framerate is high enough, or NVidia Fast VSync (Enhanced Sync on AMD), which drops frames which would cause tearing, while having a much lower input latency compared to traditional VSync.
+    It's recommended to keep this off, and use NVidia Adaptive VSync, which keeps VSync on only when the framerate is high enough, or NVidia Fast VSync (Enhanced Sync on AMD), which drops frames which would cause tearing, while having a much lower input latency compared to traditional VSync.
 
 - **CPU usage:** low
 - **GPU usage:** none
@@ -716,8 +716,7 @@ Default setting: based on which preset you are currently using.
 Toggles match status HUD at the top of the screen.
 
 !!! note
-It's highly recommended to use this module, as the built-in console variable
-does not work properly when turning off directly.
+    It's highly recommended to use this module, as the built-in console variable does not work properly when turning off directly.
 
 - **CPU usage:** high
 - **GPU usage:** none
@@ -808,7 +807,7 @@ Default setting: **`htmlmotd=off`** (all presets).
 Controls the outlines that appear through walls for players, some objectives (payload cart, CTF briefcase), and the Scottish Resistance's stickybombs.
 
 !!! warning
-Outlines do not work on DirectX 8.
+    Outlines do not work on DirectX 8.
 
 - **CPU usage:** high
 - **GPU usage:** high
@@ -841,7 +840,7 @@ Default setting: **`dynamic_background=off`** (all presets).
 Controls a variety of sound effects, including spatialization and positional effects.
 
 !!! note
-In the Low and Very Low preset VPKs, spatialization and positional effects (called [DSP](https://developer.valvesoftware.com/wiki/DSP) in the Source Engine) are completely disabled.
+    In the Low and Very Low preset VPKs, spatialization and positional effects (called [DSP](https://developer.valvesoftware.com/wiki/DSP) in the Source Engine) are completely disabled.
 
 - **CPU usage:** high
 - **GPU usage:** none
@@ -874,7 +873,7 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 Ensures compatibility with animation and model mods.
 
 !!! info
-You may want to also enable preloading using the [Map Background module](#map-background).
+    You may want to also enable preloading using the [Map Background module](#map-background).
 
 - **CPU usage:** none
 - **GPU usage:** none
@@ -889,8 +888,7 @@ Default setting: **`mod_support=on`** (all presets).
 Controls the privacy of your Casual/Competitive matchmaking party.
 
 !!! warning
-The Friends Only restriction for parties can be bypassed, which means anyone can join your party if they have your Steam ID.
-Leaving your party open can result in anyone to join your party and spam party chat, causing lag, sound spam and other disruptions.
+    The Friends Only restriction for parties can be bypassed, which means anyone can join your party if they have your Steam ID. Leaving your party open can result in anyone to join your party and spam party chat, causing lag, sound spam and other disruptions.
 
 - **CPU usage:** none
 - **GPU usage:** none

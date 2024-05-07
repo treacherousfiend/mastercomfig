@@ -113,4 +113,4 @@ with your current DirectX 8 configurations. It does not override or change Direc
 So if you use a DirectX 8 launch option, you can continue to use it keeping the above in mind.
 
 !!! warning
-There are also reports of DirectX 8 not working after the 64-bit update or causing crashes.
+    There are also reports of DirectX 8 not working after the 64-bit update or causing crashes.
