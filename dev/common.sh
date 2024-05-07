@@ -48,7 +48,7 @@ function packageItems {
   if [ "${zip_package:=false}" != true ] ; then
       # Package into VPK
       if hash parallel &> /dev/null ; then
-        ls -d */ | parallel vpk {}
+        ls -d */ | parallel 'vpk {}'
       else
         for D in *; do
             if [ -d "${D}" ]; then

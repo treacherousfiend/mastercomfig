@@ -34,3 +34,5 @@ Thumbs.db
 # mkdocs
 site/
 .cache/
+
+__pycache__/
