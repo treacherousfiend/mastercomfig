@@ -54,6 +54,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-enablefakeip** : for security. Prevents your local server from registering its public IP with Steam, by using Steam Datagram instead. It may require a few map loads to connect to item servers.
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after the first launch.
+    * **-audiolanguage english** : Forces the game voiceline audio to English. This can be useful for when you use a different game language but would like the English audio.
     * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`.
 
 === "macOS"
@@ -63,6 +64,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-enablefakeip** : for security. Prevents your local server from registering its public IP with Steam, by using Steam Datagram instead. May require a few map loads to connect to item servers.
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
+    * **-audiolanguage english** : Forces the game voiceline audio to English. This can be useful for when you use a different game language but would like the English audio.
     * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
     * **-snd_openal** : uses OpenAL instead of Mac Audio Queue, which can reduce latency and provide improved audio effects. :warning: **Experimental** as it is unsupported by Valve
     * **-glslcontrolflow** : enables support for GLSL control flow. This allows for 4 world lights. :warning: **Experimental** as it may cause rendering issues
@@ -75,6 +77,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-enablefakeip** : for security. Prevents your local server from registering its public IP with Steam, by using Steam Datagram instead. May require a few map loads to connect to item servers.
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
+    * **-audiolanguage english** : Forces the game voiceline audio to English. This can be useful for when you use a different game language but would like the English audio.
     * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
 
 ## Uncommon Launch Options
