@@ -13,7 +13,10 @@ Try a desktop-oriented kernel like [XanMod](https://xanmod.org) or [linux-tkg](h
 
 ## cpupower
 
-Use either the `performance`, `schedutil`, or `ondemand` governors when playing TF2 by using `cpupower frequency-set -g performance`, for example. You can see available governors for your CPU with `cpupower frequency-info`.
+Use either the `performance`, `schedutil`, or `ondemand` governors by using `cpupower frequency-set -g schedutil`, for example. You can see available governors for your CPU with `cpupower frequency-info`.
+
+!!! info
+    GameMode will set the CPU governor to `performance` automatically while playing TF2.
 
 ## GameMode
 
@@ -27,12 +30,6 @@ To run TF2 using GameMode through Steam launch options, open Steam, then:
 If launching TF2 from Lutris, "Enable Feral GameMode" is likely enabled by default, hence the Launch Options additions aren't used. You can check in Lutris via:
 
 - Games -> right-click Team Fortress 2 -> Configure -> System options
-
-## Ananicy Cpp
-
-You can install `schedtool` and [Ananicy Cpp](https://gitlab.com/ananicy-cpp/ananicy-cpp), then enable `ananicy-cpp.service` to automatically apply rule-based process priority balancing, improving resources allocated to TF2.
-
-This, however, requires a [profile for TF2](https://github.com/Nefelim4ag/Ananicy/blob/master/ananicy.d/00-default/games/_steam.rules). Follow Ananicy Cpp's [profile import instructions](https://gitlab.com/ananicy-cpp/ananicy-cpp#community-rules) to use community profiles from the original Ananicy software, which can be downloaded [here](https://github.com/Nefelim4ag/Ananicy) or by installing the original Ananicy.
 
 ## irqbalance
 
@@ -50,6 +47,10 @@ The Linux kernel supports multiple I/O scheduler algorithms for storage devices 
 ## Virtual memory optimization
 
 See the [Arch Linux wiki](https://wiki.archlinux.org/index.php/Sysctl#Virtual_memory) for information about improving virtual memory parameters.
+
+## Tuned
+
+Tuned is a profile-based optimization daemon by Red Hat. Install it for your distro and run `tuned-adm profile latency-performance` to apply the `latency-performance` profile. You can view a list of all available profiles with `tuned-adm list`. For more information, view the [Red Hat sysadmin article](https://www.redhat.com/sysadmin/linux-tuned-tuning-profiles).
 
 ## Game crashes when using a NVIDIA card
 
